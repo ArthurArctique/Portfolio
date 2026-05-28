@@ -1930,3 +1930,350 @@ footer {
         transform: translateY(-12px) rotate(2.5deg);
     }
 }
+
+/* ==========================================================================
+   macOS ONE-PAGE DESKTOP ENVIRONMENT SYSTEM (Antigravity Overrides & Extensions)
+   ========================================================================== */
+
+/* 1. Global Viewport Lock */
+html, body {
+    overflow: hidden !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* 2. Desktop Environment Container */
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    padding-top: 30px; /* Leave space for menubar */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* 3. Top macOS Menubar */
+.mac-menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 10005;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    user-select: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+}
+
+.menubar-left, .menubar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.menu-item {
+    cursor: default;
+    transition: opacity 0.2s;
+}
+
+.menu-item.apple-logo {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    opacity: 0.7;
+}
+
+/* 4. Desktop Wallpaper Widgets (Background Content) */
+.desktop-wallpaper-widget {
+    position: absolute;
+    top: 12%;
+    left: 6%;
+    width: 40%;
+    max-width: 480px;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    animation: float 10s ease-in-out infinite;
+}
+
+.desktop-wallpaper-widget h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+.desktop-wallpaper-widget h1 span {
+    background: linear-gradient(135deg, var(--color-deep-blue), var(--color-accent), #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.desktop-wallpaper-widget .badge {
+    margin-bottom: 1.25rem;
+    background: rgba(255,255,255,0.4);
+    border-color: rgba(99,102,241,0.2);
+}
+
+.desktop-wallpaper-visual {
+    position: absolute;
+    bottom: 15%;
+    left: 6%;
+    width: 260px;
+    height: 260px;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* 5. Desktop Grid Icons */
+.desktop-icons {
+    position: absolute;
+    top: 60px;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 2;
+    user-select: none;
+}
+
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 76px;
+    cursor: pointer;
+    text-align: center;
+    gap: 0.35rem;
+    transition: transform 0.2s;
+}
+
+.desktop-icon:hover {
+    transform: scale(1.05);
+}
+
+.desktop-icon .icon-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.desktop-icon:hover .icon-wrapper {
+    box-shadow: 0 12px 24px rgba(99,102,241,0.15), 0 4px 8px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+}
+
+.desktop-icon .icon-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* 6. macOS Draggable Windows (Position absolute & Layout Refactoring) */
+.mac-window {
+    position: absolute !important;
+    top: 100px;
+    left: 200px;
+    width: 780px;
+    height: 500px;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 30px 60px rgba(15,23,42,0.12), 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Specific Window Sizes */
+#about {
+    width: 780px;
+    height: 480px;
+    top: calc(50% - 240px);
+    left: calc(50% - 390px + 100px); /* Shifted to right */
+}
+
+#experience {
+    width: 820px;
+    height: 520px;
+    top: calc(50% - 260px - 20px);
+    left: calc(50% - 410px + 120px);
+}
+
+#skills {
+    width: 800px;
+    height: 510px;
+    top: calc(50% - 255px + 20px);
+    left: calc(50% - 400px + 80px);
+}
+
+#contact {
+    width: 580px;
+    height: 460px;
+    top: calc(50% - 230px);
+    left: calc(50% - 290px + 140px);
+}
+
+.mac-titlebar {
+    cursor: grab;
+}
+
+.mac-titlebar:active {
+    cursor: grabbing;
+}
+
+/* Remove closed dotted placeholder outlines */
+.mac-window.window-closed {
+    display: none !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Window Content Scroll bar and padding refactor */
+.mac-content {
+    flex: 1;
+    overflow-y: auto !important;
+    padding: 2.25rem 2rem !important;
+    margin: 0;
+    height: calc(100% - 44px);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Modern clean scrollbar inside windows */
+.mac-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.mac-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mac-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 99px;
+}
+
+.mac-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.24);
+}
+
+/* Maximized Mode Override */
+.mac-window.window-maximized {
+    top: 40px !important;
+    left: 10px !important;
+    width: calc(100vw - 20px) !important;
+    height: calc(100vh - 140px) !important;
+    z-index: 10000 !important;
+    transform: none !important;
+}
+
+.mac-window.window-maximized .mac-content {
+    height: calc(100% - 44px) !important;
+}
+
+/* Dragging state helper (prevents cursor lagging glitches) */
+.mac-window.dragging {
+    transition: none !important;
+    opacity: 0.95;
+    box-shadow: 0 40px 80px rgba(15,23,42,0.18), 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Focus Mode Overlay fix for Desktop layout */
+.mac-focus-overlay {
+    z-index: 9990; /* Right behind focused windows */
+}
+
+/* 7. macOS Dock layout sync */
+.mac-dock-container {
+    transform: translateX(-50%) translateY(0) !important; /* Managed nicely */
+}
+
+/* 8. Responsive Mobile Optimization */
+@media (max-width: 992px) {
+    .desktop-wallpaper-widget {
+        width: 84%;
+        left: 8%;
+        top: 60px;
+    }
+    
+    .desktop-wallpaper-widget h1 {
+        font-size: 2.25rem;
+    }
+    
+    .desktop-wallpaper-visual {
+        display: none;
+    }
+    
+    .desktop-icons {
+        bottom: 110px;
+        top: auto;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+        gap: 1.25rem;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .desktop-icon {
+        width: 68px;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop {
+        padding-top: 30px;
+    }
+    
+    .mac-window {
+        top: 35px !important;
+        left: 5px !important;
+        width: calc(100vw - 10px) !important;
+        height: calc(100vh - 135px) !important;
+        border-radius: 1rem;
+        transform: none !important;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .mac-content {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .mac-titlebar {
+        cursor: default !important; /* Disable drag on mobile */
+    }
+}
