@@ -830,12 +830,6 @@ button {
     }
 }
 
-@media(min-width: 1024px) {
-    .skills-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
 .skill-category {
     background: white;
     border: 1px solid var(--color-secondary);
@@ -1141,6 +1135,24 @@ a.tooltip-badge.badge-cem:hover {
     --item-shadow: rgba(51, 65, 85, 0.08);
     --icon-bg: #f1f5f9;
     --icon-color: #334155;
+}
+
+/* Indigo Theme (Data Science / IA) */
+.skill-category.theme-indigo {
+    --grad-start: #6366f1;
+    --grad-end: #4f46e5;
+    --icon-bg: #e0e7ff;
+    --icon-color: #6366f1;
+}
+
+.theme-indigo .skill-item {
+    --item-bg: rgba(224, 231, 255, 0.45);
+    --item-border: rgba(199, 210, 254, 0.5);
+    --item-hover-bg: #e0e7ff;
+    --item-hover-border: #6366f1;
+    --item-shadow: rgba(99, 102, 241, 0.08);
+    --icon-bg: #c7d2fe;
+    --icon-color: #6366f1;
 }
 
 /* Legacy grid-3 and skill-card kept for potential reuse */
@@ -1891,9 +1903,7 @@ footer {
     }
     
     .dock-item:hover {
-        width: 44px;
-        height: 44px;
-        transform: translateY(-4px);
+        transform: translateY(-5px) scale(1.15);
     }
 }
 
@@ -1909,4 +1919,14 @@ footer {
 
 .dock-bounce {
     animation: dockBounce 0.5s ease-in-out;
+}
+
+/* FLOATING ANIMATION FOR HERO VISUAL ELEMENTS */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(2.5deg);
+    }
 }
