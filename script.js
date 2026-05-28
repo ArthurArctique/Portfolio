@@ -159,10 +159,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     dockItem.classList.add('minimized');
                 }
 
+                // Close button overlay (small × visible on hover)
+                const closeBtn = document.createElement('span');
+                closeBtn.className = 'dock-close-btn';
+                closeBtn.innerHTML = '×';
+                closeBtn.title = 'Fermer';
+
+                // Capture the correct targetId for closing
+                const closeTargetId = targetId;
+                closeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    closeWindow(closeTargetId);
+                    // Also close sub-pages if closing experience parent
+                    if (closeTargetId === 'experience') {
+                        closeWindow('leon-berard');
+                        closeWindow('eugene-marquis');
+                    }
+                });
+
                 dockItem.innerHTML = `
                     <i data-lucide="${app.icon}"></i>
                     <span class="dock-tooltip">${label}</span>
                 `;
+                dockItem.appendChild(closeBtn);
 
                 dockItem.addEventListener('click', () => {
                     dockItem.classList.add('dock-bounce');
@@ -177,12 +196,72 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
+                // Right-click to close
+                dockItem.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                    closeWindow(closeTargetId);
+                    if (closeTargetId === 'experience') {
+                        closeWindow('leon-berard');
+                        closeWindow('eugene-marquis');
+                    }
+                });
+
                 dockContainer.appendChild(dockItem);
             }
         });
 
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
+        }
+    }
+
+    // Clamp a window so it never goes outside the visible viewport
+    function clampWindowPosition(windowEl) {
+        if (!windowEl || windowEl.classList.contains('window-maximized') || windowEl.classList.contains('window-closed')) return;
+        if (window.innerWidth < 768) return; // Skip on mobile (windows are full-width)
+
+        const menubarHeight = 30;
+        const dockHeight = 80; // Reserve space for dock at bottom
+        const minVisible = 120; // At least 120px of window must remain visible on each side
+
+        const rect = windowEl.getBoundingClientRect();
+        const screenW = window.innerWidth;
+        const screenH = window.innerHeight;
+
+        let needsAdjust = false;
+        let adjustX = 0;
+        let adjustY = 0;
+
+        // Titlebar must not go above the menubar
+        if (rect.top < menubarHeight) {
+            adjustY = menubarHeight - rect.top;
+            needsAdjust = true;
+        }
+
+        // Titlebar must not go below the screen (keep at least titlebar visible)
+        if (rect.top > screenH - dockHeight - 44) {
+            adjustY = (screenH - dockHeight - 44) - rect.top;
+            needsAdjust = true;
+        }
+
+        // Window must not go too far right (keep minVisible px on screen)
+        if (rect.left > screenW - minVisible) {
+            adjustX = (screenW - minVisible) - rect.left;
+            needsAdjust = true;
+        }
+
+        // Window must not go too far left
+        if (rect.right < minVisible) {
+            adjustX = minVisible - rect.right;
+            needsAdjust = true;
+        }
+
+        if (needsAdjust) {
+            const style = window.getComputedStyle(windowEl);
+            const matrix = new DOMMatrix(style.transform);
+            const newX = matrix.e + adjustX;
+            const newY = matrix.f + adjustY;
+            windowEl.style.transform = `translate(${newX}px, ${newY}px)`;
         }
     }
 
@@ -198,6 +277,9 @@ document.addEventListener('DOMContentLoaded', () => {
         highestZIndex++;
         windowEl.style.zIndex = highestZIndex;
         windowEl.classList.add('window-focused');
+
+        // Ensure the window stays within visible bounds
+        clampWindowPosition(windowEl);
         
         updateFocusOverlay();
         updateDock();
@@ -210,6 +292,8 @@ document.addEventListener('DOMContentLoaded', () => {
         windowEl.classList.remove('window-closed');
         windowEl.classList.remove('window-minimized');
         focusWindow(windowEl);
+        // Double-check clamping after layout reflow
+        requestAnimationFrame(() => clampWindowPosition(windowEl));
     }
 
     function closeWindow(targetId) {
@@ -295,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const desktopEl = document.getElementById('desktop');
     if (desktopEl) {
         desktopEl.addEventListener('click', (e) => {
-            if (e.target === desktopEl || e.target.classList.contains('desktop-wallpaper-widget') || e.target.closest('.desktop-wallpaper-widget')) {
+            if (e.target === desktopEl) {
                 document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
             }
         });
@@ -413,9 +497,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === EXPERIENCE CARDS & LINKS CLICK HANDLERS ===
+    // Helper: inherit position (transform) from parent experience window
+    function inheritPositionFromExperience(childId) {
+        const expWin = document.getElementById('experience');
+        const childWin = document.getElementById(childId);
+        if (!expWin || !childWin) return;
+        // Copy the current runtime transform (drag offset) so child appears at same spot
+        const style = window.getComputedStyle(expWin);
+        const matrix = new DOMMatrix(style.transform);
+        if (matrix.e !== 0 || matrix.f !== 0) {
+            childWin.style.transform = `translate(${matrix.e}px, ${matrix.f}px)`;
+        } else {
+            childWin.style.transform = '';
+        }
+        // Also inherit maximized state if applicable
+        if (expWin.classList.contains('window-maximized')) {
+            childWin.classList.add('window-maximized');
+        }
+    }
+
     document.querySelectorAll('a[href="leon-berard.html"]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            inheritPositionFromExperience('leon-berard');
             closeWindow('experience');
             openWindow('leon-berard');
         });
@@ -424,6 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href="eugene-marquis.html"]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            inheritPositionFromExperience('eugene-marquis');
             closeWindow('experience');
             openWindow('eugene-marquis');
         });
