@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur [Nom] - Développeur Fullstack Santé & Tech</title>
+    <meta name="description" content="Portfolio d'un développeur passionné par la MedTech.">
+
+    <!-- Local CSS (Stable) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Elements (Abstract Organic Shapes) -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass" id="navbar">
+        <div class="navbar-content">
+            <!-- Logo -->
+            <div class="logo">
+                Arthur<span class="text-accent">.MedTech</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact" class="btn-cta">Me Contacter</a></li>
+            </ul>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-btn" onclick="toggleMenu()">
+                <i data-lucide="menu" width="24" height="24"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden">
+        <ul style="display: flex; flex-direction: column; gap: 1rem;">
+            <li><a href="#home" onclick="toggleMenu()">Accueil</a></li>
+            <li><a href="#about" onclick="toggleMenu()">À Propos</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Parcours</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Compétences</a></li>
+            <li><a href="#contact" onclick="toggleMenu()"
+                    style="color: var(--color-accent); font-weight: 700;">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Column: Typography & CTAs -->
+                <div class="reveal">
+                    <div class="badge">
+                        <span style="width: 8px; height: 8px; background: var(--color-accent); border-radius: 50%; display: inline-block; animation: pulse 1.5s infinite;"></span>
+                        Alternance & Master Recherche • Rentrée 2026
+                    </div>
+
+                    <h1>
+                        Donner du sens à la<br><span>Data de Santé</span>.
+                    </h1>
+
+                    <p style="font-size: 1.15rem; color: var(--color-muted); line-height: 1.6; margin-bottom: 2.5rem;">
+                        Arthur [Nom] — Étudiant en BUT Science des Données (IUT Vannes).<br>
+                        Passionné de Deep Learning et d'imagerie médicale, je développe des solutions d'IA cliniques pour optimiser les traitements de radiothérapie.
+                    </p>
+
+                    <div class="hero-btns">
+                        <a href="#experience" class="btn btn-primary">Explorer mon parcours</a>
+                        <a href="#about" class="btn btn-secondary">En savoir plus</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Abstract MedTech Visual -->
+                <div class="reveal" style="transition-delay: 200ms; width: 100%; max-width: 440px; justify-self: center;">
+                    <div style="aspect-ratio: 1/1; border-radius: 2rem; background: linear-gradient(135deg, #e0e7ff, #f0e6ff, #fce7f3); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <!-- Floating decorative elements -->
+                        <div style="position: absolute; top: 15%; left: 20%; width: 80px; height: 80px; border-radius: 1.25rem; background: rgba(99, 102, 241, 0.12); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; animation: float 6s ease-in-out infinite;">
+                            <i data-lucide="brain-circuit" width="32" height="32" style="color: var(--color-accent);"></i>
+                        </div>
+                        <div style="position: absolute; bottom: 20%; right: 15%; width: 70px; height: 70px; border-radius: 1rem; background: rgba(236, 72, 153, 0.1); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; animation: float 5s 1s ease-in-out infinite;">
+                            <i data-lucide="heart-pulse" width="28" height="28" style="color: #ec4899;"></i>
+                        </div>
+                        <div style="position: absolute; top: 55%; left: 10%; width: 60px; height: 60px; border-radius: 0.85rem; background: rgba(16, 185, 129, 0.1); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; animation: float 7s 0.5s ease-in-out infinite;">
+                            <i data-lucide="database" width="24" height="24" style="color: #10b981;"></i>
+                        </div>
+
+                        <!-- Central icon -->
+                        <i data-lucide="activity" width="100" height="100" style="color: rgba(99, 102, 241, 0.15);"></i>
+
+                        <!-- Floating glass card -->
+                        <div class="card-glass" style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem; padding: 1.25rem 1.5rem; border-radius: var(--radius-md);">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <div style="background: rgba(99, 102, 241, 0.1); padding: 0.5rem; border-radius: 0.5rem; color: var(--color-accent);">
+                                    <i data-lucide="sparkles"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem;">Data Science × Santé</h4>
+                                    <p style="font-size: 0.75rem; color: var(--color-muted);">Deep Learning • Imagerie Médicale</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); color: var(--color-accent); opacity: 0.5; animation: bounce 2s infinite;">
+            <i data-lucide="chevron-down" width="32" height="32"></i>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <!-- Duplicated content for infinite scroll illusion -->
+            <span class="marquee-item">DATA SCIENCE • PYTHON • SQL • VANNES • SANTÉ • DATAVIZ • MACHINE LEARNING
+                •</span>
+            <span class="marquee-item">DATA SCIENCE • PYTHON • SQL • VANNES • SANTÉ • DATAVIZ • MACHINE LEARNING
+                •</span>
+            <span class="marquee-item">DATA SCIENCE • PYTHON • SQL • VANNES • SANTÉ • DATAVIZ • MACHINE LEARNING
+                •</span>
+            <span class="marquee-item">DATA SCIENCE • PYTHON • SQL • VANNES • SANTÉ • DATAVIZ • MACHINE LEARNING
+                •</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section-py mac-window">
+        <div class="mac-titlebar">
+            <div class="mac-controls">
+                <button class="mac-btn close-btn" data-target="about" aria-label="Fermer"></button>
+                <button class="mac-btn minimize-btn" data-target="about" aria-label="Réduire"></button>
+                <button class="mac-btn zoom-btn" data-target="about" aria-label="Agrandir"></button>
+            </div>
+            <div class="mac-title"><i data-lucide="info" width="14" height="14"></i> À propos.app</div>
+            <div class="mac-status">v1.0.0</div>
+        </div>
+
+        <div class="window-placeholder" id="placeholder-about">
+            <i data-lucide="terminal" width="20" height="20"></i>
+            <span>L'application <strong>À propos.app</strong> a été fermée.</span>
+            <button class="btn-restore" data-target="about">Relancer l'application</button>
+        </div>
+
+        <div class="mac-content container">
+            <div class="grid-2">
+                <div class="reveal">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">À propos de <span
+                            class="text-accent">moi</span></h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-muted);">
+                        Actuellement en 3ème année de <strong>BUT Science des Données à l'IUT de Vannes</strong>
+                        (2023-2026), je me passionne pour les applications de l'informatique et des statistiques dans le
+                        domaine de la santé.
+                    </p>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--color-muted);">
+                        Mon objectif est de poursuivre mes études en <strong>Master dès la rentrée 2026</strong>, pour
+                        approfondir mes connaissances et contribuer à des projets de recherche et d'innovation médicale.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item" style="border-color: var(--color-accent);">
+                            <span class="stat-val">3</span>
+                            <span class="stat-label">Années de Formation</span>
+                        </div>
+                        <div class="stat-item" style="border-color: var(--color-deep-blue);">
+                            <span class="stat-val">2</span>
+                            <span class="stat-label">Expériences Majeures</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal" style="transition-delay: 200ms; position: relative;">
+                    <!-- Abstract visual representation instead of image -->
+                    <div
+                        style="aspect-ratio: 1/1; border-radius: var(--radius-xl); background: linear-gradient(135deg, #e0e7ff, #fce7f3); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="graduation-cap" width="128" height="128"
+                            style="color: rgba(99, 102, 241, 0.2);"></i>
+ 
+                        <!-- Floating Card -->
+                        <div class="card-glass"
+                            style="position: absolute; bottom: 2rem; left: 2rem; right: 2rem; padding: 1.5rem; border-radius: var(--radius-md);">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <div
+                                    style="background: rgba(99, 102, 241, 0.1); padding: 0.5rem; border-radius: 0.5rem; color: var(--color-accent);">
+                                    <i data-lucide="book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 1rem;">Objectif Master</h4>
+                                    <p style="font-size: 0.8rem; color: var(--color-muted);">Rentrée 2026</p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-py mac-window">
+        <div class="mac-titlebar">
+            <div class="mac-controls">
+                <button class="mac-btn close-btn" data-target="experience" aria-label="Fermer"></button>
+                <button class="mac-btn minimize-btn" data-target="experience" aria-label="Réduire"></button>
+                <button class="mac-btn zoom-btn" data-target="experience" aria-label="Agrandir"></button>
+            </div>
+            <div class="mac-title"><i data-lucide="briefcase" width="14" height="14"></i> Mon Parcours.app</div>
+            <div class="mac-status">v2.1.0</div>
+        </div>
+
+        <div class="window-placeholder" id="placeholder-experience">
+            <i data-lucide="terminal" width="20" height="20"></i>
+            <span>L'application <strong>Mon Parcours.app</strong> a été fermée.</span>
+            <button class="btn-restore" data-target="experience">Relancer l'application</button>
+        </div>
+
+        <div class="mac-content container">
+            <h2 class="text-center reveal" style="font-size: 2.5rem; margin-bottom: 4rem;">Mon Parcours</h2>
+ 
+            <div class="parcours-grid">
+                <!-- Column 1: Formation -->
+                <div class="parcours-col reveal" style="transition-delay: 100ms;">
+                    <h3 class="parcours-col-title">
+                        <i data-lucide="graduation-cap" style="color: var(--color-accent);"></i>
+                        Formation
+                    </h3>
+                    <div class="parcours-timeline theme-iut">
+                        <!-- Item: BUT Science des Données -->
+                        <div class="parcours-item theme-iut">
+                            <div class="parcours-marker"></div>
+                            <div class="parcours-card" id="card-iut">
+                                <span class="parcours-date">2023 - 2026</span>
+                                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">BUT Science des Données</h3>
+                                <h4 class="parcours-establishment" style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">IUT de Vannes (Université de Bretagne Sud)</h4>
+                                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-dark); margin-bottom: 1rem;">
+                                    Spécialisation dans le parcours <strong>VCOD</strong> (Visualisation et Conception d'Outils Décisionnels), avec options avancées en <strong>Intelligence Artificielle (IA)</strong> & <strong>Systèmes d'Information Géographique (SIG)</strong>.
+                                </p>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">VCOD</span>
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">IA & SIG</span>
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">BUT3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Column 2: Expériences Professionnelles -->
+                <div class="parcours-col reveal" style="transition-delay: 200ms;">
+                    <h3 class="parcours-col-title">
+                        <i data-lucide="briefcase" style="color: var(--color-deep-blue);"></i>
+                        Expériences
+                    </h3>
+                    <div class="parcours-timeline theme-experiences">
+                        <!-- Item 1: Léon Bérard -->
+                        <div class="parcours-item theme-clb">
+                            <div class="parcours-marker"></div>
+                            <a href="leon-berard.html" class="parcours-card" id="card-clb">
+                                <span class="parcours-date">Sept 2025 - Août 2026</span>
+                                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Technicien de Recherche</h3>
+                                <h4 class="parcours-establishment" style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Centre Léon Bérard (Lyon)</h4>
+                                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-dark); margin-bottom: 1rem;">
+                                    Développement en alternance d'un modèle de Deep Learning pour la prédiction de contrôle qualité en radiothérapie.
+                                </p>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">Alternance</span>
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">Deep Learning</span>
+                                </div>
+                                <span class="parcours-link-indicator">Découvrir l'alternance <i data-lucide="arrow-right" style="width: 0.85rem; height: 0.85rem;"></i></span>
+                            </a>
+                        </div>
+ 
+                        <!-- Item 2: Eugène Marquis -->
+                        <div class="parcours-item theme-cem">
+                            <div class="parcours-marker"></div>
+                            <a href="eugene-marquis.html" class="parcours-card" id="card-cem">
+                                <span class="parcours-date">Avril 2025 - Juin 2025</span>
+                                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Développeur d'Application (DSI)</h3>
+                                <h4 class="parcours-establishment" style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Centre Eugène Marquis (Rennes)</h4>
+                                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-dark); margin-bottom: 1rem;">
+                                    Création d'un outil d'extraction d'images DICOM pour le service de Physique Médicale.
+                                </p>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">Stage</span>
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">DICOM</span>
+                                </div>
+                                <span class="parcours-link-indicator">Découvrir le stage <i data-lucide="arrow-right" style="width: 0.85rem; height: 0.85rem;"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-py mac-window">
+        <div class="mac-titlebar">
+            <div class="mac-controls">
+                <button class="mac-btn close-btn" data-target="skills" aria-label="Fermer"></button>
+                <button class="mac-btn minimize-btn" data-target="skills" aria-label="Réduire"></button>
+                <button class="mac-btn zoom-btn" data-target="skills" aria-label="Agrandir"></button>
+            </div>
+            <div class="mac-title"><i data-lucide="cpu" width="14" height="14"></i> Mes Compétences.app</div>
+            <div class="mac-status">v4.0.2</div>
+        </div>
+
+        <div class="window-placeholder" id="placeholder-skills">
+            <i data-lucide="terminal" width="20" height="20"></i>
+            <span>L'application <strong>Mes Compétences.app</strong> a été fermée.</span>
+            <button class="btn-restore" data-target="skills">Relancer l'application</button>
+        </div>
+
+        <div class="mac-content container">
+            <div class="text-center reveal" style="margin-bottom: 4rem;">
+                <span style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); font-weight: 700; font-size: 0.8rem;">Expertise</span>
+                <h2 style="font-size: 2.5rem;">Mes Compétences</h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <!-- Category 1: Informatique -->
+                <div class="skill-category theme-teal reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i data-lucide="terminal" width="22" height="22"></i></div>
+                        <h3 class="skill-category-title">Informatique</h3>
+                    </div>
+                    <div class="skill-list-grid cols-2">
+                        <div class="skill-item" data-targets="card-iut, card-clb, card-cem">
+                            <div class="skill-item-icon"><i data-lucide="code-2" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Python (POO)</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="table" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Pandas</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="sigma" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Numpy</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="brain-circuit" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Scikit-learn</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut, card-cem">
+                            <div class="skill-item-icon"><i data-lucide="database" width="18" height="18"></i></div>
+                            <span class="skill-item-name">SQL / Spatial</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="hard-drive" width="18" height="18"></i></div>
+                            <span class="skill-item-name">NoSQL</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-cem">
+                            <div class="skill-item-icon"><i data-lucide="workflow" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Talend (ETL)</span>
+                            <div class="skill-tooltip">
+                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="file-spreadsheet" width="18" height="18"></i></div>
+                            <span class="skill-item-name">VBA</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="map" width="18" height="18"></i></div>
+                            <span class="skill-item-name">QGIS</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="monitor" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Suite Office</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Statistiques & IA -->
+                <div class="skill-category theme-blue reveal" style="transition-delay: 150ms;">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i data-lucide="bar-chart-2" width="22" height="22"></i></div>
+                        <h3 class="skill-category-title">Statistiques & IA</h3>
+                    </div>
+                    <div class="skill-list-grid cols-2">
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="chart-line" width="18" height="18"></i></div>
+                            <span class="skill-item-name">R</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="scatter-chart" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Stat. Descriptive</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="trending-up" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Stat. Inférentielle</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="flask-conical" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Tests H0/H1</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Data Science / IA -->
+                <div class="skill-category theme-indigo reveal" style="transition-delay: 200ms;">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i data-lucide="database" width="22" height="22"></i></div>
+                        <h3 class="skill-category-title">Data Science / IA</h3>
+                    </div>
+                    <div class="skill-list-grid cols-2">
+                        <div class="skill-item" data-targets="card-clb">
+                            <div class="skill-item-icon"><i data-lucide="blocks" width="18" height="18"></i></div>
+                            <span class="skill-item-name">PyTorch</span>
+                            <div class="skill-tooltip">
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut">
+                            <div class="skill-item-icon"><i data-lucide="brain" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Machine Learning</span>
+                            <div class="skill-tooltip">
+                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-clb">
+                            <div class="skill-item-icon"><i data-lucide="layers" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Deep Learning</span>
+                            <div class="skill-tooltip">
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-clb">
+                            <div class="skill-item-icon"><i data-lucide="box" width="18" height="18"></i></div>
+                            <span class="skill-item-name">U-Net</span>
+                            <div class="skill-tooltip">
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-clb">
+                            <div class="skill-item-icon"><i data-lucide="network" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Réseaux de neurones</span>
+                            <div class="skill-tooltip">
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Spécifique Santé -->
+                <div class="skill-category theme-pink reveal" style="transition-delay: 300ms;">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon"><i data-lucide="heart-pulse" width="22" height="22"></i></div>
+                        <h3 class="skill-category-title">Spécifique Santé</h3>
+                    </div>
+                    <div class="skill-list-grid cols-2">
+                        <div class="skill-item" data-targets="card-cem">
+                            <div class="skill-item-icon"><i data-lucide="file-image" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Norme DICOM</span>
+                            <div class="skill-tooltip">
+                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-clb, card-cem">
+                            <div class="skill-item-icon"><i data-lucide="radiation" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Physique Médicale</span>
+                            <div class="skill-tooltip">
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-clb">
+                            <div class="skill-item-icon"><i data-lucide="activity" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Indice Gamma & Dosimétrie</span>
+                            <div class="skill-tooltip">
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-clb">
+                            <div class="skill-item-icon"><i data-lucide="shield-check" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Modélisation U-Net & CQ</span>
+                            <div class="skill-tooltip">
+                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="reveal" style="transition-delay: 400ms; margin-top: 3rem;">
+                <div class="skill-category theme-slate" style="max-width: 36rem; margin: 0 auto;">
+                    <div class="skill-category-header" style="justify-content: center;">
+                        <div class="skill-category-icon"><i data-lucide="languages" width="22" height="22"></i></div>
+                        <h3 class="skill-category-title" style="margin-bottom: 0;">Langues</h3>
+                    </div>
+                    <div class="skill-list-grid cols-2" style="margin-top: 1.5rem;">
+                        <div class="skill-item">
+                            <div class="skill-item-icon"><i data-lucide="flag" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Français <em style="font-weight: normal; font-style: italic; color: var(--color-muted); font-size: 0.8rem;">(maternel)</em></span>
+                            <div class="skill-tooltip">
+                                <span class="tooltip-badge badge-perso"><i data-lucide="user"></i> Parcours Personnel</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item-icon"><i data-lucide="globe" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Anglais</span>
+                            <div class="skill-tooltip">
+                                <span class="tooltip-badge badge-perso"><i data-lucide="user"></i> Parcours Personnel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-py mac-window" style="position: relative; overflow: hidden;">
+        <div class="mac-titlebar">
+            <div class="mac-controls">
+                <button class="mac-btn close-btn" data-target="contact" aria-label="Fermer"></button>
+                <button class="mac-btn minimize-btn" data-target="contact" aria-label="Réduire"></button>
+                <button class="mac-btn zoom-btn" data-target="contact" aria-label="Agrandir"></button>
+            </div>
+            <div class="mac-title"><i data-lucide="mail" width="14" height="14"></i> Contact.app</div>
+            <div class="mac-status">v1.1.0</div>
+        </div>
+
+        <div class="window-placeholder" id="placeholder-contact">
+            <i data-lucide="terminal" width="20" height="20"></i>
+            <span>L'application <strong>Contact.app</strong> a été fermée.</span>
+            <button class="btn-restore" data-target="contact">Relancer l'application</button>
+        </div>
+
+        <div class="mac-content container">
+            <div class="text-center reveal">
+                <span style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); font-weight: 700; font-size: 0.8rem;">Contact</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Travaillons ensemble</h2>
+
+                <form class="contact-form">
+                    <div style="display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; margin-bottom: 1rem;">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" class="form-input" placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="vous@exemple.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" class="form-textarea" placeholder="Comment puis-je vous aider ?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                        Envoyer le message <i data-lucide="send" width="16"></i>
+                    </button>
+                </form>
+
+                <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 2rem;">
+                    <a href="#" style="opacity: 0.6;"><i data-lucide="github"></i></a>
+                    <a href="#" style="opacity: 0.6;"><i data-lucide="linkedin"></i></a>
+                    <a href="#" style="opacity: 0.6;"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Arthur [Nom] - Portfolio Santé & Tech.</p>
+        </div>
+    </footer>
+
+    <!-- Backdrop Overlay for Focus Mode -->
+    <div class="mac-focus-overlay" id="focus-overlay"></div>
+
+    <!-- Floating macOS Dock -->
+    <div class="mac-dock-container">
+        <div class="dock-item active" data-target="about">
+            <i data-lucide="user"></i>
+            <span class="dock-tooltip">À Propos</span>
+        </div>
+        <div class="dock-item active" data-target="experience">
+            <i data-lucide="briefcase"></i>
+            <span class="dock-tooltip">Mon Parcours</span>
+        </div>
+        <div class="dock-item active" data-target="skills">
+            <i data-lucide="cpu"></i>
+            <span class="dock-tooltip">Compétences</span>
+        </div>
+        <div class="dock-item active" data-target="contact">
+            <i data-lucide="mail"></i>
+            <span class="dock-tooltip">Contact</span>
+        </div>
+    </div>
+
+    <!-- Logic -->
+    <script src="script.js"></script>
+</body>
+
+</html>
