@@ -318,10 +318,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // === EXPERIENCE CARDS CLICK HANDLERS ===
+    const triggerClb = document.getElementById('card-clb');
+    if (triggerClb) {
+        triggerClb.addEventListener('click', (e) => {
+            e.preventDefault();
+            openWindow('leon-berard');
+        });
+    }
+
+    const triggerCem = document.getElementById('card-cem');
+    if (triggerCem) {
+        triggerCem.addEventListener('click', (e) => {
+            e.preventDefault();
+            openWindow('eugene-marquis');
+        });
+    }
+
     // === STARTUP ENVIRONMENT INITIAL STATE ===
     // Open "À Propos" window by default as a welcoming landing page
     setTimeout(() => {
         openWindow('about');
-    }, 300);
+    }, 100);
 
 });
