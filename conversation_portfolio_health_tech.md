@@ -341,4 +341,69 @@ justement je ne comprend pas comment faire, tu serais capable d'ajouter cette co
 
 Absolument ! J'ai complété ce fichier `conversation_portfolio_health_tech.md` à la racine de votre projet `Desktop/Portfolio2026/Portfolio` afin d'intégrer l'intégralité de nos derniers échanges, explications et actions. Tout votre historique de création est désormais documenté directement au sein de votre projet !
 
+---
+
+## 👤 Utilisateur (28/05/2026 22:10:00)
+
+ok pas mal. J'aimerais quand même que tu augmente la taille par défaut des fenêtres et que ajoute une contraite qui dimensionne toujours les fenêtres pour qu'il n'y ait jamais de barre de défilement horizontale, seul le éfilement verticale doit être autorisé. D'ailleurs le "full screen" n'est pas assez grand et pas centré, met un flou en arrière sur les bords. J'aimerais que tu revois un peu le style des apps au bureau, pour faire plus réel. D'ailleurs j'aimerais une barre en bas qui ressemble à un vrai doc, qui ajoute des apps qui sont lancé. Quand une app est fermé (rouge) elle disparait du doc et de l'affichage et quand on réduit (orange) elle reste dans le loc mais n'aparait plus à l'écran
+
+---
+
+## 🤖 Antigravity (28/05/2026 22:30:00)
+
+J'ai mis en place cette refonte majeure de l'environnement de bureau macOS :
+
+1. **Taille par défaut des fenêtres augmentée** : Toutes les fenêtres ont été agrandies (ex. À Propos passe de 780x480px à 920x580px) et sécurisées avec des contraintes de taille de viewport (`max-width: 95vw; max-height: 85vh;`).
+2. **Zéro scroll horizontal** : Directives strictes appliquées à `.mac-content` et à ses descendants (wrapping forcé, masquage de l'overflow horizontal) pour interdire tout défilement horizontal. Seul le défilement vertical est désormais actif.
+3. **Plein écran centré & flouté (Focus Mode)** : Le plein écran occupe désormais 95% de la largeur et 90% de la hauteur, centré à l'écran via un positionnement absolu et `translate(-50%, -50%)`. Un voile d'arrière-plan avec un flou prononcé de `12px` (`#focus-overlay`) s'anime de façon fluide derrière la fenêtre maximisée active tout en maintenant le Dock et le menu au premier plan.
+4. **Icônes de bureau macOS réalistes** : Le style des labels a été retravaillé avec un texte blanc fin, une ombre portée double ultra-contrastée et un fond transparent qui se transforme en capsule glassmorphe au survol ou bleue lors de la sélection active.
+5. **Dock macOS 100% dynamique** : Le Dock a été entièrement réarchitecturé en JavaScript. Au chargement, seule l'application ouverte s'affiche dans le Dock. Les applications se rajoutent au lancement avec une puce active, deviennent semi-translucides et disparaissent de l'écran lors de la réduction (bouton orange), et s'effacent complètement du Dock et de l'écran lors de la fermeture (bouton rouge).
+
+---
+
+## 👤 Utilisateur (28/05/2026 23:05:00)
+
+franchement super bien. Quelques retours ; le text blanc sur blanc des app au bureau c'est pas possible ; quand je suis full screen et que je clique sur une autre app je veux que ça supprime le full screen de l'app en question et donc ajoute en premier plan la nouvelle app. Pour les autres pages (comme les expériences quand on clique sur l'une d'elle) je voudrais que ce soit hérité de l'app en question dans le doc, trouve une façon de l'indiquer dans le doc et que l'on puisse cliquer sur la page précédente.
+
+---
+
+## 🤖 Antigravity (28/05/2026 23:25:00)
+
+J'ai apporté les ajustements et optimisations ergonomiques demandés :
+
+1. **Lisibilité des icônes de bureau résolue** : Remplacement du simple texte blanc par des capsules foncées glassmorphes semi-transparentes (`rgba(15, 23, 42, 0.45)` avec `backdrop-filter: blur(8px)`) très esthétiques et d'une lisibilité irréprochable quel que soit le fond d'écran.
+2. **Désactivation automatique du plein écran (Auto-Unmaximize)** : Lorsque vous vous focalisez sur une nouvelle application (clic sur le Dock, double-clic sur le bureau, ou transition interne), toute autre application précédemment en plein écran retourne automatiquement à sa taille par défaut, laissant la nouvelle application active prendre le premier plan en mode normal.
+3. **Héritage d'application et Dock unifié pour "Mon Parcours"** :
+   - Les sous-pages d'expériences ("Centre Léon Bérard" et "Centre Eugène Marquis") n'apparaissent plus comme des applications distinctes dans le Dock.
+   - Lorsqu'elles sont ouvertes, le bouton "Mon Parcours" dans le Dock reste actif et son infobulle se met à jour de façon dynamique (ex : `Mon Parcours › Léon Bérard`), indiquant parfaitement la hiérarchie.
+   - Cliquer sur cet onglet du Dock cible, minimise ou restaure directement la sous-page active.
+4. **Navigation "Page Précédente" intégrée** : Ajout d'un bouton de retour élégant (`Page Précédente` avec une icône de chevron gauche Lucide) en haut de chaque sous-page d'expérience. Cliquer dessus ferme la sous-page et ramène de façon fluide l'utilisateur à la liste des expériences "Mon Parcours".
+
+---
+
+## 👤 Utilisateur (28/05/2026 23:35:00)
+
+continue
+
+---
+
+## 🤖 Antigravity (28/05/2026 23:40:34)
+
+J'ai finalisé la cohérence de l'environnement de bureau en mettant en place un intercepteur de liens global :
+
+* **Interception globale des liens HTML** : Tous les badges, fiches et liens redirigeant vers `leon-berard.html` ou `eugene-marquis.html` (y compris ceux intégrés sous forme de badges de compétences dans l'application "Compétences") sont désormais interceptés par le script. Plutôt que de forcer le navigateur à recharger la page ou de quitter l'interface unifiée macOS, ils déclenchent instantanément l'ouverture de la fenêtre native correspondante et la synchronisation du Dock.
+* **Validation globale** : L'expérience utilisateur est maintenant 100% cohérente et immersive, préservant parfaitement la fluidité du portfolio unifié One-Page.
+
+---
+
+## 👤 Utilisateur (28/05/2026 23:42:00)
+
+ajoute tout ce que tu as fait ici dans le markdown conversation_portfolio_health_tech.md
+
+---
+
+## 🤖 Antigravity (28/05/2026 23:43:00)
+
+C'est chose faite ! J'ai complété le fichier `conversation_portfolio_health_tech.md` en y ajoutant l'intégralité des derniers développements, retours et optimisations (depuis le Dock dynamique, la gestion du plein écran, l'amélioration du contraste des icônes de bureau, jusqu'à la gestion avancée de la navigation héritée et l'interception globale des liens HTML). L'historique complet de votre projet est maintenant impeccablement préservé à la racine !
+
 

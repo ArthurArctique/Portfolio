@@ -85,19 +85,122 @@ document.addEventListener('DOMContentLoaded', () => {
     const focusOverlay = document.getElementById('focus-overlay');
     const windows = document.querySelectorAll('.mac-window');
 
+    const APPS = [
+        { id: 'about', label: 'À Propos', icon: 'user' },
+        { id: 'experience', label: 'Mon Parcours', icon: 'briefcase' },
+        { id: 'skills', label: 'Compétences', icon: 'cpu' },
+        { id: 'contact', label: 'Contact', icon: 'mail' }
+    ];
+
+    function updateFocusOverlay() {
+        if (!focusOverlay) return;
+        const maximizedWin = document.querySelector('.mac-window.window-maximized:not(.window-closed):not(.window-minimized)');
+        if (maximizedWin) {
+            focusOverlay.classList.add('active');
+            const winZIndex = parseInt(maximizedWin.style.zIndex) || 10;
+            focusOverlay.style.zIndex = winZIndex - 1;
+        } else {
+            focusOverlay.classList.remove('active');
+        }
+    }
+
+    function updateDock() {
+        const dockContainer = document.querySelector('.mac-dock-container');
+        if (!dockContainer) return;
+
+        dockContainer.innerHTML = '';
+
+        APPS.forEach(app => {
+            let windowEl = document.getElementById(app.id);
+            if (!windowEl) return;
+
+            let label = app.label;
+            let targetId = app.id;
+            let isRunning = !windowEl.classList.contains('window-closed');
+            let isFocused = windowEl.classList.contains('window-focused');
+            let isMinimized = windowEl.classList.contains('window-minimized');
+
+            // Héritage de Mon Parcours pour ses sous-pages d'expérience
+            if (app.id === 'experience') {
+                const clbWin = document.getElementById('leon-berard');
+                const cemWin = document.getElementById('eugene-marquis');
+                
+                const clbOpen = clbWin && !clbWin.classList.contains('window-closed');
+                const cemOpen = cemWin && !cemWin.classList.contains('window-closed');
+
+                if (clbOpen) {
+                    isRunning = true;
+                    targetId = 'leon-berard';
+                    label = 'Mon Parcours › Léon Bérard';
+                    windowEl = clbWin;
+                    isFocused = clbWin.classList.contains('window-focused');
+                    isMinimized = clbWin.classList.contains('window-minimized');
+                } else if (cemOpen) {
+                    isRunning = true;
+                    targetId = 'eugene-marquis';
+                    label = 'Mon Parcours › Eugène Marquis';
+                    windowEl = cemWin;
+                    isFocused = cemWin.classList.contains('window-focused');
+                    isMinimized = cemWin.classList.contains('window-minimized');
+                }
+            }
+
+            // Afficher dans le Dock si l'application ou sa sous-page est lancée
+            if (isRunning) {
+                const dockItem = document.createElement('div');
+                dockItem.className = 'dock-item';
+                dockItem.setAttribute('data-target', targetId);
+
+                if (isFocused) {
+                    dockItem.classList.add('active');
+                }
+
+                if (isMinimized) {
+                    dockItem.classList.add('minimized');
+                }
+
+                dockItem.innerHTML = `
+                    <i data-lucide="${app.icon}"></i>
+                    <span class="dock-tooltip">${label}</span>
+                `;
+
+                dockItem.addEventListener('click', () => {
+                    dockItem.classList.add('dock-bounce');
+                    setTimeout(() => dockItem.classList.remove('dock-bounce'), 500);
+
+                    if (windowEl.classList.contains('window-minimized')) {
+                        openWindow(targetId);
+                    } else if (windowEl.classList.contains('window-focused')) {
+                        minimizeWindow(targetId);
+                    } else {
+                        focusWindow(windowEl);
+                    }
+                });
+
+                dockContainer.appendChild(dockItem);
+            }
+        });
+
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    }
+
     function focusWindow(windowEl) {
-        // Remove focus state from other windows
+        // Supprimer le mode plein écran des autres applications si on se focalise sur une nouvelle
+        windows.forEach(w => {
+            if (w !== windowEl && w.classList.contains('window-maximized')) {
+                w.classList.remove('window-maximized');
+            }
+        });
+
         windows.forEach(w => w.classList.remove('window-focused'));
-        
-        // Bring to front
         highestZIndex++;
         windowEl.style.zIndex = highestZIndex;
         windowEl.classList.add('window-focused');
         
-        // Bring focus overlay behind this window if it is focused in overlay mode (Legacy compatibility)
-        if (focusOverlay && windowEl.classList.contains('window-maximized')) {
-            focusOverlay.style.zIndex = highestZIndex - 1;
-        }
+        updateFocusOverlay();
+        updateDock();
     }
 
     function openWindow(targetId) {
@@ -107,12 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
         windowEl.classList.remove('window-closed');
         windowEl.classList.remove('window-minimized');
         focusWindow(windowEl);
-
-        // Update Dock Indicator
-        const dockItem = document.querySelector(`.dock-item[data-target="${targetId}"]`);
-        if (dockItem) {
-            dockItem.classList.add('active');
-        }
     }
 
     function closeWindow(targetId) {
@@ -122,11 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
         windowEl.classList.add('window-closed');
         windowEl.classList.remove('window-focused');
 
-        // Update Dock Indicator
-        const dockItem = document.querySelector(`.dock-item[data-target="${targetId}"]`);
-        if (dockItem) {
-            dockItem.classList.remove('active');
-        }
+        updateFocusOverlay();
+        updateDock();
     }
 
     function minimizeWindow(targetId) {
@@ -135,6 +229,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         windowEl.classList.add('window-minimized');
         windowEl.classList.remove('window-focused');
+
+        updateFocusOverlay();
+        updateDock();
     }
 
     function toggleZoomWindow(targetId) {
@@ -182,33 +279,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === DESKTOP ICONS CLICK HANDLER ===
     document.querySelectorAll('.desktop-icon').forEach(icon => {
-        icon.addEventListener('click', () => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // Deselect others
+            document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
+            // Select this one
+            icon.classList.add('selected');
+
             const targetId = icon.getAttribute('data-target');
             openWindow(targetId);
         });
     });
 
-    // === DOCK ITEMS CLICK HANDLER ===
-    document.querySelectorAll('.dock-item').forEach(item => {
-        item.addEventListener('click', () => {
-            const targetId = item.getAttribute('data-target');
-            const windowEl = document.getElementById(targetId);
-            
-            // Trigger dock bounce animation
-            item.classList.add('dock-bounce');
-            setTimeout(() => item.classList.remove('dock-bounce'), 500);
-
-            if (windowEl) {
-                if (windowEl.classList.contains('window-closed') || windowEl.classList.contains('window-minimized')) {
-                    openWindow(targetId);
-                } else if (windowEl.classList.contains('window-focused')) {
-                    minimizeWindow(targetId);
-                } else {
-                    focusWindow(windowEl);
-                }
+    // Click on desktop to deselect icons
+    const desktopEl = document.getElementById('desktop');
+    if (desktopEl) {
+        desktopEl.addEventListener('click', (e) => {
+            if (e.target === desktopEl || e.target.classList.contains('desktop-wallpaper-widget') || e.target.closest('.desktop-wallpaper-widget')) {
+                document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
             }
         });
-    });
+    }
+
+    // Initialize Dock once at startup
+    updateDock();
 
     // === DRAG AND DROP FUNCTIONALITY (Vanilla JS, mouse + touch) ===
     document.querySelectorAll('.mac-window').forEach(windowEl => {
@@ -318,22 +412,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === EXPERIENCE CARDS CLICK HANDLERS ===
-    const triggerClb = document.getElementById('card-clb');
-    if (triggerClb) {
-        triggerClb.addEventListener('click', (e) => {
+    // === EXPERIENCE CARDS & LINKS CLICK HANDLERS ===
+    document.querySelectorAll('a[href="leon-berard.html"]').forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
+            closeWindow('experience');
             openWindow('leon-berard');
         });
-    }
+    });
 
-    const triggerCem = document.getElementById('card-cem');
-    if (triggerCem) {
-        triggerCem.addEventListener('click', (e) => {
+    document.querySelectorAll('a[href="eugene-marquis.html"]').forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
+            closeWindow('experience');
             openWindow('eugene-marquis');
         });
-    }
+    });
+
+    // === BACK BUTTONS FOR SUB-PAGES ===
+    document.querySelectorAll('.mac-back-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const parentWindow = btn.closest('.mac-window');
+            if (parentWindow) {
+                closeWindow(parentWindow.id);
+            }
+            const backToId = btn.getAttribute('data-back-to');
+            if (backToId) {
+                openWindow(backToId);
+            }
+        });
+    });
 
     // === STARTUP ENVIRONMENT INITIAL STATE ===
     // Open "À Propos" window by default as a welcoming landing page
