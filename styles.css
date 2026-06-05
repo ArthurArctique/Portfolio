@@ -532,6 +532,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
+    overflow: visible !important;
 }
 
 @media(min-width: 992px) {
@@ -544,6 +545,7 @@ button {
 .parcours-col {
     display: flex;
     flex-direction: column;
+    overflow: visible !important;
 }
 
 .parcours-col-title {
@@ -569,6 +571,7 @@ button {
     flex-direction: column;
     gap: 2.25rem;
     flex-grow: 1;
+    overflow: visible !important;
 }
 
 .parcours-timeline.theme-iut {
@@ -581,18 +584,21 @@ button {
 
 .parcours-item {
     position: relative;
+    overflow: visible !important;
 }
 
 .parcours-marker {
     position: absolute;
-    left: calc(-2rem - 6px); /* Align bullet exactly over the border line */
+    left: calc(-2rem - 7px); /* Align bullet exactly over the border line */
     top: 2.25rem; /* Center bullet vertically with badge */
-    width: 0.65rem;
-    height: 0.65rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background: white;
     border: 3px solid var(--color-accent);
     border-radius: 50%;
     z-index: 10;
+    box-sizing: content-box !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 2px 6px rgba(0,0,0,0.12);
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -685,6 +691,15 @@ button {
     transform: scale(1.4);
 }
 
+.parcours-item.theme-univ-rennes .parcours-marker {
+    border-color: #c92a2a;
+}
+.parcours-item.theme-univ-rennes:hover .parcours-marker,
+.parcours-item.theme-univ-rennes.active-highlight .parcours-marker {
+    background: #c92a2a;
+    transform: scale(1.4);
+}
+
 .parcours-item.theme-clb .parcours-marker {
     border-color: #0B9BF4;
 }
@@ -729,6 +744,32 @@ button {
 .parcours-item.theme-iut:hover .parcours-establishment,
 .parcours-item.theme-iut.active-highlight .parcours-establishment {
     color: #7048e8 !important;
+}
+
+/* Université de Rennes - Hover / Active (Red Theme) */
+.parcours-item.theme-univ-rennes:hover .parcours-card,
+.parcours-item.theme-univ-rennes.active-highlight .parcours-card {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(201, 42, 42, 0.12), 0 10px 10px -5px rgba(201, 42, 42, 0.04);
+    border-color: rgba(201, 42, 42, 0.4) !important;
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.parcours-item.theme-univ-rennes:hover .parcours-card::after,
+.parcours-item.theme-univ-rennes.active-highlight .parcours-card::after {
+    background: linear-gradient(135deg, rgba(201, 42, 42, 0.05), transparent);
+    opacity: 1;
+}
+
+.parcours-item.theme-univ-rennes:hover .parcours-date,
+.parcours-item.theme-univ-rennes.active-highlight .parcours-date {
+    color: #c92a2a !important;
+    background: rgba(201, 42, 42, 0.08) !important;
+}
+
+.parcours-item.theme-univ-rennes:hover .parcours-establishment,
+.parcours-item.theme-univ-rennes.active-highlight .parcours-establishment {
+    color: #c92a2a !important;
 }
 
 /* Centre Léon Bérard - Hover / Active (French Blue #0B9BF4 Theme) */
@@ -812,6 +853,7 @@ button {
 }
 
 .parcours-item.theme-iut .parcours-link-indicator { color: #7048e8; }
+.parcours-item.theme-univ-rennes .parcours-link-indicator { color: #c92a2a; }
 .parcours-item.theme-clb .parcours-link-indicator { color: #0B9BF4; }
 .parcours-item.theme-cem .parcours-link-indicator { color: #e8590c; }
 
@@ -849,7 +891,7 @@ button {
 .skill-category:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
-    border-color: rgba(32, 201, 151, 0.2);
+    border-color: var(--hover-border, rgba(99, 102, 241, 0.2));
 }
 
 .skill-category-header {
@@ -1072,22 +1114,23 @@ a.tooltip-badge.badge-cem:hover {
 
 /* THEMES VARIABLES (Teal, Blue, Pink, Slate) */
 
-/* Teal Theme (Informatique) - Overhauled to Periwinkle Pastel */
+/* Teal Theme (Informatique) - Emerald Teal */
 .skill-category.theme-teal {
-    --grad-start: #4F46E5;
-    --grad-end: #6366F1;
-    --icon-bg: #e0e7ff;
-    --icon-color: #4F46E5;
+    --grad-start: #059669;
+    --grad-end: #0d9488;
+    --icon-bg: #d1fae5;
+    --icon-color: #059669;
+    --hover-border: rgba(5, 150, 105, 0.25);
 }
 
 .theme-teal .skill-item {
-    --item-bg: rgba(224, 231, 255, 0.4);
-    --item-border: rgba(199, 210, 254, 0.5);
-    --item-hover-bg: #e0e7ff;
-    --item-hover-border: #4F46E5;
-    --item-shadow: rgba(79, 70, 229, 0.08);
-    --icon-bg: #c7d2fe;
-    --icon-color: #4F46E5;
+    --item-bg: rgba(209, 250, 229, 0.35);
+    --item-border: rgba(167, 243, 208, 0.5);
+    --item-hover-bg: #d1fae5;
+    --item-hover-border: #059669;
+    --item-shadow: rgba(5, 150, 105, 0.08);
+    --icon-bg: #a7f3d0;
+    --icon-color: #059669;
 }
 
 /* Blue Theme (Statistiques) */
@@ -1096,6 +1139,7 @@ a.tooltip-badge.badge-cem:hover {
     --grad-end: #4f46e5;
     --icon-bg: #dbeafe;
     --icon-color: #0056b3;
+    --hover-border: rgba(0, 86, 179, 0.25);
 }
 
 .theme-blue .skill-item {
@@ -1114,6 +1158,7 @@ a.tooltip-badge.badge-cem:hover {
     --grad-end: #f43f5e;
     --icon-bg: #fce7f3;
     --icon-color: #ec4899;
+    --hover-border: rgba(236, 72, 153, 0.25);
 }
 
 .theme-pink .skill-item {
@@ -1132,6 +1177,7 @@ a.tooltip-badge.badge-cem:hover {
     --grad-end: #0f172a;
     --icon-bg: #f1f5f9;
     --icon-color: #475569;
+    --hover-border: rgba(71, 85, 105, 0.25);
 }
 
 .theme-slate .skill-item {
@@ -1150,6 +1196,7 @@ a.tooltip-badge.badge-cem:hover {
     --grad-end: #4f46e5;
     --icon-bg: #e0e7ff;
     --icon-color: #6366f1;
+    --hover-border: rgba(99, 102, 241, 0.25);
 }
 
 .theme-indigo .skill-item {
@@ -2173,7 +2220,11 @@ html, body {
     transform: scale(1);
     transform-origin: center center;
     transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                top 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                left 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 30px 60px rgba(15,23,42,0.12), 0 5px 15px rgba(0,0,0,0.05);
 }
 
@@ -2207,6 +2258,13 @@ html, body {
 }
 
 /* Sub-pages inherit exact size & position from #experience parent */
+#master-rennes {
+    width: 1100px;
+    height: 640px;
+    top: calc(50% - 320px);
+    left: calc(50% - 550px + 80px);
+}
+
 #leon-berard {
     width: 1100px;
     height: 640px;
@@ -2260,9 +2318,15 @@ html, body {
     padding-right: 3rem !important;
 }
 
-.mac-content * {
+.mac-content *:not(.parcours-marker):not(.skill-tooltip):not(.tooltip-badge) {
     max-width: 100% !important;
     box-sizing: border-box !important;
+}
+
+.parcours-marker {
+    max-width: none !important;
+    box-sizing: content-box !important;
+    overflow: visible !important;
 }
 
 /* Modern clean scrollbar inside windows */
@@ -2376,4 +2440,140 @@ html, body {
 /* Snappy reveals inside windows for instantaneous macOS responsiveness */
 .mac-window .reveal {
     transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* --- CONTACT & NOTIFICATION PREMIUM STYLES --- */
+
+/* Social icons interactive styles */
+.social-icon {
+    opacity: 0.6;
+    color: var(--color-dark);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    color: var(--color-accent);
+}
+
+/* Form validation error highlight */
+.form-input.error,
+.form-textarea.error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+.shake-anim {
+    animation: shake 0.4s ease-in-out;
+}
+
+/* Button loader spin */
+.spinner-loader {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* macOS Notification Banner */
+.mac-notification {
+    position: fixed;
+    top: 45px;
+    right: 20px;
+    width: 340px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+    z-index: 999999;
+    padding: 12px 14px;
+    display: flex;
+    gap: 12px;
+    transform: translateX(360px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+}
+
+.mac-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.mac-notification.hide {
+    transform: translateX(360px);
+    opacity: 0;
+}
+
+.mac-notification-icon {
+    width: 36px;
+    height: 36px;
+    background: #007aff; /* Apple Mail Blue */
+    color: white;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mac-notification-content {
+    flex-grow: 1;
+    font-size: 0.8rem;
+    line-height: 1.35;
+}
+
+.mac-notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.mac-notification-app {
+    font-weight: 600;
+    color: #6e6e73;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.mac-notification-time {
+    color: #86868b;
+    font-size: 0.7rem;
+}
+
+.mac-notification-title {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #1d1d1f;
+    margin-bottom: 2px;
+}
+
+.mac-notification-message {
+    color: #434344;
 }

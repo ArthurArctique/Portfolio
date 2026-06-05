@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arthur [Nom] - Développeur Fullstack Santé & Tech</title>
-    <meta name="description" content="Portfolio d'un développeur passionné par la MedTech.">
+    <meta name="description" content="Portfolio d'Arthur Le Dévéhat, Data Science & Santé.">
 
     <!-- Local CSS (Stable) -->
-    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="styles.css?v=2.1">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -34,7 +34,7 @@
     <div class="mac-menubar">
         <div class="menubar-left">
             <span class="menu-item apple-logo"></span>
-            <span class="menu-item" style="font-weight: 700;">Arthur.MedTech</span>
+            <span class="menu-item" style="font-weight: 700;">Arthur.dev</span>
             <span class="menu-item">Fichier</span>
             <span class="menu-item">Édition</span>
             <span class="menu-item">Présentation</span>
@@ -97,12 +97,12 @@
                             class="text-accent">moi</span></h2>
                     <p style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-muted);">
                         Actuellement en 3ème année de <strong>BUT Science des Données à l'IUT de Vannes</strong>
-                        (2023-2026), je me passionne pour les applications de l'informatique et des statistiques dans le
-                        domaine de la santé.
+                        (2023-2026), j'ai eu l'occasion de travailler dans deux centres de lutte contre le cancer
+                        où j'ai appliqué la data science à des problématiques concrètes en radiothérapie.
                     </p>
                     <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--color-muted);">
-                        Mon objectif est de poursuivre mes études en <strong>Master dès la rentrée 2026</strong>, pour
-                        approfondir mes connaissances et contribuer à des projets de recherche et d'innovation médicale.
+                        À la rentrée 2026, j'intégrerai le <strong>Master Bio-informatique à l'Université de Rennes</strong>
+                        pour continuer dans cette direction et me spécialiser dans le traitement des données biomédicales.
                     </p>
 
                     <div class="about-stats">
@@ -118,11 +118,9 @@
                 </div>
 
                 <div class="reveal" style="transition-delay: 200ms; position: relative;">
-                    <!-- Abstract visual representation instead of image -->
                     <div
-                        style="aspect-ratio: 1/1; border-radius: var(--radius-xl); background: linear-gradient(135deg, #e0e7ff, #fce7f3); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <i data-lucide="graduation-cap" width="128" height="128"
-                            style="color: rgba(99, 102, 241, 0.2);"></i>
+                        style="aspect-ratio: 1/1; border-radius: var(--radius-xl); position: relative; overflow: hidden;">
+                        <img src="photo%20LKN.jpeg" alt="Arthur Le Dévéhat" style="width: 100%; height: 100%; object-fit: cover; display: block;">
  
                         <!-- Floating Card -->
                         <div class="card-glass"
@@ -133,8 +131,8 @@
                                     <i data-lucide="book-open"></i>
                                 </div>
                                 <div>
-                                    <h4 style="font-size: 1rem;">Objectif Master</h4>
-                                    <p style="font-size: 0.8rem; color: var(--color-muted);">Rentrée 2026</p>
+                                    <h4 style="font-size: 1rem;">Master Bio-info</h4>
+                                    <p style="font-size: 0.8rem; color: var(--color-muted);">Accepté - Rentrée 2026</p>
                                 </div>
                             </div>
                         </div>    
@@ -162,15 +160,33 @@
             <div class="parcours-grid">
                 <!-- Column 1: Formation -->
                 <div class="parcours-col reveal" style="transition-delay: 100ms;">
-                    <h3 class="parcours-col-title">
-                        <i data-lucide="graduation-cap" style="color: var(--color-accent);"></i>
+                    <h3 class="parcours-col-title" style="color: #087f5b;">
+                        <i data-lucide="graduation-cap" style="color: #087f5b;"></i>
                         Formation
                     </h3>
                     <div class="parcours-timeline theme-iut">
+                        <!-- Item: Master Bio-informatique -->
+                        <div class="parcours-item theme-univ-rennes">
+                            <div class="parcours-marker"></div>
+                            <a href="master-rennes.html" class="parcours-card" id="card-master-rennes">
+                                <span class="parcours-date">2026 - 2028 (À venir)</span>
+                                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Master Bio-informatique</h3>
+                                <h4 class="parcours-establishment" style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">Université de Rennes</h4>
+                                <p style="font-size: 0.9rem; line-height: 1.5; color: var(--color-dark); margin-bottom: 1rem;">
+                                    Formation à l'interface entre l'informatique, les mathématiques et la biologie, orientée vers l'analyse de données biomédicales et génomiques.
+                                </p>
+                                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">Bio-informatique</span>
+                                    <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">Santé</span>
+                                </div>
+                                <span class="parcours-link-indicator">Découvrir la formation <i data-lucide="arrow-right" style="width: 0.85rem; height: 0.85rem;"></i></span>
+                            </a>
+                        </div>
+
                         <!-- Item: BUT Science des Données -->
                         <div class="parcours-item theme-iut">
                             <div class="parcours-marker"></div>
-                            <div class="parcours-card" id="card-iut">
+                            <a href="iutvannes.html" class="parcours-card" id="card-iut">
                                 <span class="parcours-date">2023 - 2026</span>
                                 <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">BUT Science des Données</h3>
                                 <h4 class="parcours-establishment" style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.75rem;">IUT de Vannes (Université de Bretagne Sud)</h4>
@@ -182,15 +198,16 @@
                                     <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">IA & SIG</span>
                                     <span style="font-size: 0.75rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-weight: 600; color: #475569;">BUT3</span>
                                 </div>
-                            </div>
+                                <span class="parcours-link-indicator">Découvrir la formation <i data-lucide="arrow-right" style="width: 0.85rem; height: 0.85rem;"></i></span>
+                            </a>
                         </div>
                     </div>
                 </div>
  
                 <!-- Column 2: Expériences Professionnelles -->
                 <div class="parcours-col reveal" style="transition-delay: 200ms;">
-                    <h3 class="parcours-col-title">
-                        <i data-lucide="briefcase" style="color: var(--color-deep-blue);"></i>
+                    <h3 class="parcours-col-title" style="color: #003d80;">
+                        <i data-lucide="briefcase" style="color: #003d80;"></i>
                         Expériences
                     </h3>
                     <div class="parcours-timeline theme-experiences">
@@ -248,9 +265,10 @@
         </div>
 
         <div class="mac-content container">
-            <div class="text-center reveal" style="margin-bottom: 4rem;">
-                <span style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); font-weight: 700; font-size: 0.8rem;">Expertise</span>
-                <h2 style="font-size: 2.5rem;">Mes Compétences</h2>
+            <div class="text-center reveal" style="margin-bottom: 3rem;">
+                <span style="text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-accent); font-weight: 700; font-size: 0.75rem; display: inline-block; margin-bottom: 0.75rem;">Expertise &amp; Savoir-faire</span>
+                <h2 style="font-size: 2.2rem; margin-bottom: 0.75rem;">Mes Compétences</h2>
+                <p style="font-size: 0.95rem; color: var(--color-muted); max-width: 500px; margin: 0 auto; line-height: 1.5;">Survolez une compétence pour voir où elle a été acquise, et cliquez sur le badge pour accéder à l'expérience.</p>
             </div>
 
             <div class="skills-grid">
@@ -266,73 +284,100 @@
                             <div class="skill-item-icon"><i data-lucide="code-2" width="18" height="18"></i></div>
                             <span class="skill-item-name">Python (POO)</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
-                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
-                        <div class="skill-item" data-targets="card-iut">
+                        <div class="skill-item" data-targets="card-iut, card-clb, card-cem">
                             <div class="skill-item-icon"><i data-lucide="table" width="18" height="18"></i></div>
                             <span class="skill-item-name">Pandas</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
-                        <div class="skill-item" data-targets="card-iut">
+                        <div class="skill-item" data-targets="card-iut, card-clb">
                             <div class="skill-item-icon"><i data-lucide="sigma" width="18" height="18"></i></div>
                             <span class="skill-item-name">Numpy</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
-                        <div class="skill-item" data-targets="card-iut">
+                        <div class="skill-item" data-targets="card-iut, card-clb">
                             <div class="skill-item-icon"><i data-lucide="brain-circuit" width="18" height="18"></i></div>
                             <span class="skill-item-name">Scikit-learn</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut, card-cem">
                             <div class="skill-item-icon"><i data-lucide="database" width="18" height="18"></i></div>
                             <span class="skill-item-name">SQL / Spatial</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
-                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut">
                             <div class="skill-item-icon"><i data-lucide="hard-drive" width="18" height="18"></i></div>
                             <span class="skill-item-name">NoSQL</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-cem">
                             <div class="skill-item-icon"><i data-lucide="workflow" width="18" height="18"></i></div>
                             <span class="skill-item-name">Talend (ETL)</span>
                             <div class="skill-tooltip">
-                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut">
                             <div class="skill-item-icon"><i data-lucide="file-spreadsheet" width="18" height="18"></i></div>
                             <span class="skill-item-name">VBA</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut">
                             <div class="skill-item-icon"><i data-lucide="map" width="18" height="18"></i></div>
                             <span class="skill-item-name">QGIS</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut">
                             <div class="skill-item-icon"><i data-lucide="monitor" width="18" height="18"></i></div>
                             <span class="skill-item-name">Suite Office</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-cem">
+                            <div class="skill-item-icon"><i data-lucide="globe" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Flask</span>
+                            <div class="skill-tooltip">
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-cem">
+                            <div class="skill-item-icon"><i data-lucide="wifi" width="18" height="18"></i></div>
+                            <span class="skill-item-name">pynetdicom</span>
+                            <div class="skill-tooltip">
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut, card-clb, card-cem">
+                            <div class="skill-item-icon"><i data-lucide="git-branch" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Git / GitHub</span>
+                            <div class="skill-tooltip">
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
                     </div>
@@ -349,28 +394,28 @@
                             <div class="skill-item-icon"><i data-lucide="chart-line" width="18" height="18"></i></div>
                             <span class="skill-item-name">R</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut">
                             <div class="skill-item-icon"><i data-lucide="scatter-chart" width="18" height="18"></i></div>
                             <span class="skill-item-name">Stat. Descriptive</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut">
                             <div class="skill-item-icon"><i data-lucide="trending-up" width="18" height="18"></i></div>
                             <span class="skill-item-name">Stat. Inférentielle</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-iut">
                             <div class="skill-item-icon"><i data-lucide="flask-conical" width="18" height="18"></i></div>
                             <span class="skill-item-name">Tests H0/H1</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
                             </div>
                         </div>
                     </div>
@@ -387,35 +432,44 @@
                             <div class="skill-item-icon"><i data-lucide="blocks" width="18" height="18"></i></div>
                             <span class="skill-item-name">PyTorch</span>
                             <div class="skill-tooltip">
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
-                        <div class="skill-item" data-targets="card-iut">
+                        <div class="skill-item" data-targets="card-iut, card-clb">
                             <div class="skill-item-icon"><i data-lucide="brain" width="18" height="18"></i></div>
                             <span class="skill-item-name">Machine Learning</span>
                             <div class="skill-tooltip">
-                                <a href="#card-iut" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-clb">
                             <div class="skill-item-icon"><i data-lucide="layers" width="18" height="18"></i></div>
                             <span class="skill-item-name">Deep Learning</span>
                             <div class="skill-tooltip">
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-clb">
                             <div class="skill-item-icon"><i data-lucide="box" width="18" height="18"></i></div>
                             <span class="skill-item-name">U-Net</span>
                             <div class="skill-tooltip">
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-clb">
                             <div class="skill-item-icon"><i data-lucide="network" width="18" height="18"></i></div>
                             <span class="skill-item-name">Réseaux de neurones</span>
                             <div class="skill-tooltip">
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-iut, card-clb">
+                            <div class="skill-item-icon"><i data-lucide="repeat" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Validation croisée / KFold</span>
+                            <div class="skill-tooltip">
+                                <a href="#" data-open-window="iut-vannes" class="tooltip-badge badge-iut"><i data-lucide="graduation-cap"></i> Formation (IUT)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
                     </div>
@@ -432,57 +486,64 @@
                             <div class="skill-item-icon"><i data-lucide="file-image" width="18" height="18"></i></div>
                             <span class="skill-item-name">Norme DICOM</span>
                             <div class="skill-tooltip">
-                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-clb, card-cem">
                             <div class="skill-item-icon"><i data-lucide="radiation" width="18" height="18"></i></div>
                             <span class="skill-item-name">Physique Médicale</span>
                             <div class="skill-tooltip">
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
-                                <a href="eugene-marquis.html" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-clb">
                             <div class="skill-item-icon"><i data-lucide="activity" width="18" height="18"></i></div>
                             <span class="skill-item-name">Indice Gamma & Dosimétrie</span>
                             <div class="skill-tooltip">
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
                             </div>
                         </div>
                         <div class="skill-item" data-targets="card-clb">
                             <div class="skill-item-icon"><i data-lucide="shield-check" width="18" height="18"></i></div>
                             <span class="skill-item-name">Modélisation U-Net & CQ</span>
                             <div class="skill-tooltip">
-                                <a href="leon-berard.html" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-clb, card-cem">
+                            <div class="skill-item-icon"><i data-lucide="zap" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Radiothérapie</span>
+                            <div class="skill-tooltip">
+                                <a href="#" data-open-window="leon-berard" class="tooltip-badge badge-clb"><i data-lucide="briefcase"></i> Alternance (Léon Bérard)</a>
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-targets="card-cem">
+                            <div class="skill-item-icon"><i data-lucide="arrow-right-left" width="18" height="18"></i></div>
+                            <span class="skill-item-name">Protocole C-MOVE</span>
+                            <div class="skill-tooltip">
+                                <a href="#" data-open-window="eugene-marquis" class="tooltip-badge badge-cem"><i data-lucide="briefcase"></i> Stage (Eugène Marquis)</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Languages -->
-            <div class="reveal" style="transition-delay: 400ms; margin-top: 3rem;">
-                <div class="skill-category theme-slate" style="max-width: 36rem; margin: 0 auto;">
-                    <div class="skill-category-header" style="justify-content: center;">
-                        <div class="skill-category-icon"><i data-lucide="languages" width="22" height="22"></i></div>
-                        <h3 class="skill-category-title" style="margin-bottom: 0;">Langues</h3>
+            <div class="reveal" style="transition-delay: 400ms; margin-top: 2.5rem;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; padding: 1.25rem 2rem; background: rgba(241, 245, 249, 0.6); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #475569; font-weight: 700; font-size: 0.85rem;">
+                        <i data-lucide="languages" width="18" height="18"></i>
+                        <span>Langues</span>
                     </div>
-                    <div class="skill-list-grid cols-2" style="margin-top: 1.5rem;">
-                        <div class="skill-item">
-                            <div class="skill-item-icon"><i data-lucide="flag" width="18" height="18"></i></div>
-                            <span class="skill-item-name">Français <em style="font-weight: normal; font-style: italic; color: var(--color-muted); font-size: 0.8rem;">(maternel)</em></span>
-                            <div class="skill-tooltip">
-                                <span class="tooltip-badge badge-perso"><i data-lucide="user"></i> Parcours Personnel</span>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-item-icon"><i data-lucide="globe" width="18" height="18"></i></div>
-                            <span class="skill-item-name">Anglais</span>
-                            <div class="skill-tooltip">
-                                <span class="tooltip-badge badge-perso"><i data-lucide="user"></i> Parcours Personnel</span>
-                            </div>
-                        </div>
+                    <div style="width: 1px; height: 1.5rem; background: #cbd5e1;"></div>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; background: white; border: 1px solid #e2e8f0; border-radius: 1rem; font-size: 0.85rem; font-weight: 600; color: #1e293b;">
+                            <i data-lucide="flag" width="14" height="14" style="color: #475569;"></i> Français <em style="font-weight: 400; font-style: italic; color: #94a3b8; font-size: 0.75rem; margin-left: 2px;">(maternel)</em>
+                        </span>
+                        <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; background: white; border: 1px solid #e2e8f0; border-radius: 1rem; font-size: 0.85rem; font-weight: 600; color: #1e293b;">
+                            <i data-lucide="globe" width="14" height="14" style="color: #475569;"></i> Anglais <em style="font-weight: 400; font-style: italic; color: #94a3b8; font-size: 0.75rem; margin-left: 2px;">(courant)</em>
+                        </span>
                     </div>
                 </div>
         </div>
@@ -510,26 +571,32 @@
                     <div style="display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; margin-bottom: 1rem;">
                         <div class="form-group">
                             <label for="name">Nom</label>
-                            <input type="text" id="name" class="form-input" placeholder="Votre nom">
+                            <input type="text" id="name" name="Nom" class="form-input" placeholder="Votre nom" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" class="form-input" placeholder="vous@exemple.com">
+                            <input type="email" id="email" name="Email" class="form-input" placeholder="vous@exemple.com" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" rows="4" class="form-textarea" placeholder="Comment puis-je vous aider ?"></textarea>
+                        <textarea id="message" name="Message" rows="4" class="form-textarea" placeholder="Comment puis-je vous aider ?" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
                         Envoyer le message <i data-lucide="send" width="16"></i>
                     </button>
                 </form>
 
-                <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 2rem;">
-                    <a href="#" style="opacity: 0.6;"><i data-lucide="github"></i></a>
-                    <a href="#" style="opacity: 0.6;"><i data-lucide="linkedin"></i></a>
-                    <a href="#" style="opacity: 0.6;"><i data-lucide="mail"></i></a>
+                <div class="social-links" style="margin-top: 3rem; display: flex; justify-content: center; gap: 2rem;">
+                    <a href="https://github.com/ArthurArctique" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" style="width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/arthur-le-d%C3%A9v%C3%A9hat-3581a92a4/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" style="width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="mailto:arthur.ledevehat@gmail.com" class="social-icon email-link-trigger" aria-label="Email" style="width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -557,41 +624,201 @@
                     </button>
                 </div>
 
+                <!-- Header -->
                 <div style="margin-bottom: 2rem;">
-                    <span class="badge" style="margin-bottom: 1rem;">Alternance • 2025-2026</span>
+                    <span class="badge" style="margin-bottom: 1rem;">Alternance • Sept. 2025 – Août 2026</span>
                     <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1.2;">Technicien de Recherche</h1>
                     <h2 class="text-deepBlue" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Centre Léon Bérard (Lyon)</h2>
-                    <p style="font-size: 0.9rem; color: var(--color-muted);"><i data-lucide="map-pin" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Département de Physique Médicale</p>
+                    <p style="font-size: 0.9rem; color: var(--color-muted);"><i data-lucide="map-pin" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Département de Physique Médicale · Tuteur : Guillaume Beldjoudi</p>
                 </div>
 
+                <!-- Contexte CLB -->
                 <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
-                    <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700;">Le Projet : Prédiction par IA en Radiothérapie</h3>
+                    <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="hospital" width="20" height="20" class="text-accent"></i>
+                        Le Centre Léon Bérard
+                    </h3>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1rem; line-height: 1.6;">
+                        Le CLB est l'un des <strong>18 Centres de Lutte Contre le Cancer (CLCC)</strong> en France. Hôpital privé à but non lucratif, il est spécialisé dans le <strong>traitement et la recherche en cancérologie</strong>. En 2024, le centre comptait <strong>2 293 salariés</strong> et a pris en charge <strong>43 500 patients</strong>.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(99, 102, 241, 0.08); padding: 0.4rem 0.85rem; border-radius: 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--color-accent);">
+                            <i data-lucide="users" width="14" height="14"></i> 2 293 salariés
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(99, 102, 241, 0.08); padding: 0.4rem 0.85rem; border-radius: 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--color-accent);">
+                            <i data-lucide="heart-pulse" width="14" height="14"></i> 43 500 patients / an
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(99, 102, 241, 0.08); padding: 0.4rem 0.85rem; border-radius: 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--color-accent);">
+                            <i data-lucide="shield" width="14" height="14"></i> CLCC (1 des 18 en France)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet principal -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="target" width="20" height="20" class="text-accent"></i>
+                        Le Projet : Prédiction de CQ par IA en Radiothérapie
+                    </h3>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1rem; line-height: 1.6;">
+                        En radiothérapie, des <strong>plans de traitement</strong> sont élaborés pour irradier les cellules cancéreuses tout en épargnant au maximum les tissus sains. Avant chaque traitement, un <strong>Contrôle Qualité (CQ)</strong> est réalisé pour vérifier la conformité du plan. Ces CQ sont <strong>coûteux en temps machine et en personnel</strong>.
+                    </p>
                     <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1.25rem; line-height: 1.6;">
-                        Au sein du service de physique médicale, j'ai travaillé sur l'optimisation des contrôles qualité
-                        (CQ) des plans de traitement pour les patients. L'objectif était de prédire l'issue de ces
-                        contrôles avant même qu'ils ne soient réalisés physiquement, pour gagner un temps précieux.
+                        L'objectif de mon alternance : <strong>prédire l'issue de ces contrôles qualité avant même qu'ils ne soient réalisés</strong>, afin de libérer du temps machine pour la prise en charge de patients supplémentaires. La métrique clé est le <strong>Gamma Pass Rate (GPR)</strong>. Un plan est considéré comme conforme lorsque son GPR dépasse <strong>95 %</strong>.
                     </p>
                     <ul class="skill-list" style="margin-bottom: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Machine Learning :</strong> Développement de modèles prédictifs initiaux.</li>
-                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Deep Learning :</strong> Évolution vers des réseaux de neurones pour traiter des données complexes.</li>
-                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Impact :</strong> Amélioration du flux de travail clinique et réduction des délais de traitement.</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Enjeu clinique :</strong> Réduire les CQ inutiles pour optimiser l'utilisation des accélérateurs linéaires.</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Approche double :</strong> Classification binaire (ML classique) puis prédiction spatiale (Deep Learning / U-Net).</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Impact :</strong> Libérer du temps machine et du personnel pour la prise en charge de patients supplémentaires.</li>
                     </ul>
                 </div>
 
-                <div class="grid-2" style="gap: 1rem;">
+                <!-- Approche 1 : ML Classique -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #e0e7ff; color: var(--color-accent); display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0;">
+                            <i data-lucide="brain-circuit" width="22" height="22"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.1rem;">Approche 1 : Classification Binaire (ML Classique)</h3>
+                            <p style="font-size: 0.8rem; color: var(--color-muted);">Scikit-Learn · Pandas · NumPy</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 1rem; line-height: 1.6;">
+                        Première approche : prédire de manière binaire si un CQ sera <strong>conforme ou non-conforme</strong> à partir de <strong>13 indices de complexité</strong> extraits des plans de traitement.
+                    </p>
+                    <ul class="skill-list" style="margin-bottom: 0; display: flex; flex-direction: column; gap: 0.4rem;">
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Test exhaustif de <strong>tous les estimateurs</strong> disponibles dans Scikit-Learn via <code style="background:#f1f5f9; padding:1px 5px; border-radius:4px; font-size:0.8rem;">all_estimators()</code></li>
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Validation croisée <strong>5-fold KFold</strong>, split stratifié 80/20</li>
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Preprocessing : <strong>StandardScaler</strong> (variables continues), <strong>OneHotEncoder</strong> (variables catégorielles : machine, site anatomique)</li>
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Évaluation : accuracy, precision, recall, F1-score</li>
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Modèles testés par région (<em>loc</em>) et inter-régions (<em>noloc</em>)</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 0.75rem 1rem; background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; border-radius: 0 0.5rem 0.5rem 0;">
+                        <p style="font-size: 0.85rem; color: #92400e; line-height: 1.5; margin: 0;">
+                            <i data-lucide="alert-triangle" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i>
+                            <strong>Résultat :</strong> Résultats encourageants mais insuffisants pour un usage clinique. Les modèles atteignent un plafond et tendent à sur-prédire les plans « non-conformes ».
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Approche 2 : Deep Learning / U-Net -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0;">
+                            <i data-lucide="layers" width="22" height="22"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.1rem;">Approche 2 : Prédiction Spatiale (Deep Learning / U-Net)</h3>
+                            <p style="font-size: 0.8rem; color: var(--color-muted);">PyTorch · U-Net · CNN</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 1rem; line-height: 1.6;">
+                        Changement de paradigme : au lieu de prédire un simple scalaire (conforme/non-conforme), prédire la <strong>matrice Delta 2D complète</strong> (différence entre dose calculée et dose mesurée). À partir de cette matrice, on peut reconstruire la <strong>matrice Gamma</strong> et en dériver le GPR.
+                    </p>
+                    <ul class="skill-list" style="margin-bottom: 0; display: flex; flex-direction: column; gap: 0.4rem;">
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Focus sur la région <strong>Thorax</strong> : 2 141 cas, réduit à <strong>1 080 cas</strong> (dont 62 non-conformes)</li>
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Architecture <strong>U-Net</strong> : réseau convolutif encodeur-décodeur avec <strong>skip connections</strong></li>
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Entraînement avec <strong>PyTorch</strong>, reconstruction des matrices Gamma à partir des prédictions Delta</li>
+                        <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Prédictions plus équilibrées que l'approche ML classique</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 0.75rem 1rem; background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; border-radius: 0 0.5rem 0.5rem 0;">
+                        <p style="font-size: 0.85rem; color: #065f46; line-height: 1.5; margin: 0;">
+                            <i data-lucide="check-circle" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i>
+                            <strong>Résultat :</strong> Précision de 94,6 % et exactitude de 89,5 % sur le jeu de test. Sensibilité moyenne de 22 % sur les plans à GPR non-100 % (marge de progression).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Résultats clés -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="bar-chart-2" width="20" height="20" class="text-accent"></i>
+                        Résultats Clés (U-Net)
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 1rem; background: rgba(99, 102, 241, 0.06); border-radius: var(--radius-md);">
+                            <p style="font-size: 1.75rem; font-weight: 800; color: var(--color-accent); margin-bottom: 0.25rem;">94,6 %</p>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); font-weight: 600;">Précision</p>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(16, 185, 129, 0.06); border-radius: var(--radius-md);">
+                            <p style="font-size: 1.75rem; font-weight: 800; color: #10b981; margin-bottom: 0.25rem;">89,5 %</p>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); font-weight: 600;">Exactitude</p>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(245, 158, 11, 0.06); border-radius: var(--radius-md);">
+                            <p style="font-size: 1.75rem; font-weight: 800; color: #f59e0b; margin-bottom: 0.25rem;">1 080</p>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); font-weight: 600;">Cas analysés (Thorax)</p>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(139, 92, 246, 0.06); border-radius: var(--radius-md);">
+                            <p style="font-size: 1.75rem; font-weight: 800; color: #8b5cf6; margin-bottom: 0.25rem;">95 %</p>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); font-weight: 600;">Seuil GPR (conformité)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences techniques -->
+                <div class="grid-2" style="gap: 1rem; margin-bottom: 2rem;">
                     <div class="skill-card" style="padding: 1.25rem; border-radius: var(--radius-md);">
                         <div class="skill-icon" style="width: 44px; height: 44px; margin-bottom: 0.75rem; background: #e0e7ff; color: var(--color-accent); display: flex; align-items: center; justify-content: center; border-radius: 50%;">
                             <i data-lucide="brain-circuit" width="24" height="24"></i>
                         </div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Deep Learning</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Utilisation de frameworks avancés (PyTorch/TensorFlow) pour l'analyse de données médicales.</p>
+                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Deep Learning & IA</h3>
+                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Conception et entraînement de réseaux de neurones convolutifs (U-Net) avec PyTorch. Maîtrise du pipeline complet : prétraitement, augmentation, entraînement, évaluation. Classification binaire avec Scikit-Learn (exhaustive).</p>
                     </div>
                     <div class="skill-card" style="padding: 1.25rem; border-radius: var(--radius-md);">
                         <div class="skill-icon" style="background: #dbeafe; color: var(--color-deep-blue); width: 44px; height: 44px; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
                             <i data-lucide="activity" width="24" height="24"></i>
                         </div>
                         <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Physique Médicale</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Immersion dans les contraintes et exigences de la radiothérapie.</p>
+                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Compréhension des concepts de radiothérapie : matrices de dose, indice Gamma, Gamma Pass Rate. Immersion dans les contraintes cliniques et les protocoles de contrôle qualité en milieu hospitalier.</p>
+                    </div>
+                </div>
+
+                <!-- Compétences acquises -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="sparkles" width="20" height="20" class="text-accent"></i>
+                        Compétences Acquises
+                    </h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">Python (POO)</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">Scikit-Learn</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">PyTorch</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">Deep Learning / CNN</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">U-Net</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">Matrices de dose</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">Gamma Pass Rate</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">Validation croisée</span>
+                        <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.1); color: var(--color-accent); padding: 0.35rem 0.75rem; border-radius: 1rem; font-weight: 600;">Méthodologie scientifique</span>
+                    </div>
+                </div>
+
+                <!-- Map Card -->
+                <div class="card-glass" style="display: flex; gap: 2rem; padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem; align-items: center; max-width: 650px; margin-left: auto; margin-right: auto; flex-wrap: wrap; justify-content: center;">
+                    <div style="width: 250px; height: 250px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); flex-shrink: 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Centre+L%C3%A9on+B%C3%A9rard,+28+rue+Laennec,+Lyon&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            style="width: 100%; height: 100%; border: 0; filter: grayscale(10%) contrast(110%);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Centre Léon Bérard - Lyon">
+                        </iframe>
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; color: var(--color-dark);">
+                            <i data-lucide="map" width="20" height="20" style="color: var(--color-accent);"></i>
+                            Localisation à Lyon
+                        </h3>
+                        <p style="font-size: 0.95rem; color: var(--color-muted); line-height: 1.5; margin-bottom: 1rem;">
+                            Le Centre Léon Bérard est situé au cœur du pôle médical de Lyon, dans le 8ème arrondissement.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-muted);">
+                            <span><i data-lucide="map-pin" width="16" height="16" style="display: inline-block; vertical-align: middle; margin-right: 4px; color: var(--color-accent);"></i> 28 rue Laennec, 69008 Lyon</span>
+                            <a href="https://www.openstreetmap.org/?mlat=45.7415&amp;mlon=4.8790#map=17/45.7415/4.8790" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem; transition: color 0.2s; width: fit-content;">
+                                Voir en grand <i data-lucide="external-link" width="14" height="14"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -620,40 +847,558 @@
                     </button>
                 </div>
 
+                <!-- Header -->
                 <div style="margin-bottom: 2rem;">
-                    <span class="badge" style="margin-bottom: 1rem; border-color: var(--color-deep-blue); color: var(--color-deep-blue);">Stage • 2025</span>
-                    <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1.2;">Stage DSI / Physique Médicale</h1>
+                    <span class="badge" style="margin-bottom: 1rem; border-color: var(--color-deep-blue); color: var(--color-deep-blue);">Stage • 31 mars – 20 juin 2025 (12 semaines)</span>
+                    <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1.2;">Développeur d'Application (DSI)</h1>
                     <h2 class="text-deepBlue" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Centre Eugène Marquis (Rennes)</h2>
+                    <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 0.25rem;">
+                        <i data-lucide="map-pin" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i> Direction des Systèmes d'Information (DSI) · Tuteur : R. Flamant
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin-top: 0.5rem;">
+                        <i data-lucide="building" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i>
+                        Le CEM est l'un des 18 Centres de Lutte Contre le Cancer (CLCC) en France, et le seul en Bretagne. Fondé en 1923, il emploie environ 700 personnes et prend en charge plus de 26 000 patients par an.
+                    </p>
                 </div>
 
+                <!-- Projet principal : CEM@DOSE -->
                 <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
-                    <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700;">Le Projet : Extraction Automatisée d'Images DICOM</h3>
-                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1.25rem; line-height: 1.6;">
-                        À la demande du service de Physique Médicale, j'ai intégré la Direction des Systèmes
-                        d'Information (DSI) pour développer une application spécifique. L'objectif était d'extraire et
-                        de trier automatiquement des images médicales au format DICOM pour alimenter une étude clinique.
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #dbeafe; color: var(--color-deep-blue); display: flex; align-items: center; justify-content: center; border-radius: 10px; flex-shrink: 0;">
+                            <i data-lucide="radiation" width="22" height="22"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0;">Projet Principal : CEM@DOSE</h3>
+                            <span style="font-size: 0.8rem; color: var(--color-muted); font-style: italic;">(« c'est ma dose ») · Outil d'Extraction de Données DICOM</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1rem; line-height: 1.6;">
+                        J'ai développé un outil d'extraction de masse de fichiers DICOM depuis le système <strong>ARIA SIRT</strong> (Varian). L'objectif : optimiser les décisions de traitement en radiothérapie en exploitant l'imagerie quotidienne produite par les accélérateurs <strong>Halcyon</strong>.
                     </p>
-                    <ul class="skill-list" style="margin-bottom: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-deepBlue" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Développement Applicatif :</strong> Conception d'un outil robuste pour le traitement par lots.</li>
-                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-deepBlue" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Standard DICOM :</strong> Maîtrise de la structure des métadonnées d'imagerie médicale.</li>
-                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-deepBlue" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Collaboration :</strong> Pont entre les besoins cliniques (Physique Médicale) et techniques (DSI).</li>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+                        À chaque séance, l'accélérateur réalise un <strong>CBCT</strong> (imagerie cone-beam). L'idée est d'utiliser ces images quotidiennes pour suivre précisément la dose réellement délivrée à chaque organe au fil du traitement. L'étude se concentre sur les <strong>cancers ORL</strong>, où les structures les plus à risque sont la <strong>moelle épinière</strong> (risque de tétraplégie) et les <strong>glandes parotides</strong> (sécheresse buccale, altération du goût), ces dernières se rapprochant de la zone d'irradiation au cours du traitement.
+                    </p>
+                    <ul style="margin-bottom: 0; display: flex; flex-direction: column; gap: 0.5rem; list-style: none; padding: 0;">
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-deepBlue" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Mission :</strong> Développer un outil d'extraction de masse des fichiers DICOM depuis ARIA</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-deepBlue" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Résultat :</strong> Application entièrement fonctionnelle. Un dépôt de brevet a été envisagé</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" class="text-deepBlue" style="display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Collaboration :</strong> Pont entre la DSI (informatique) et la Physique Médicale (clinique)</li>
                     </ul>
                 </div>
 
-                <div class="grid-2" style="gap: 1rem;">
-                    <div class="skill-card" style="padding: 1.25rem; border-radius: var(--radius-md);">
-                        <div class="skill-icon" style="background: #f1f5f9; color: var(--color-dark); width: 44px; height: 44px; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
-                            <i data-lucide="code-2" width="24" height="24"></i>
+                <!-- Architecture en 3 phases -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                        <div style="width: 40px; height: 40px; background: #e0e7ff; color: var(--color-accent); display: flex; align-items: center; justify-content: center; border-radius: 10px; flex-shrink: 0;">
+                            <i data-lucide="workflow" width="22" height="22"></i>
                         </div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Dev Back-End</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Scripting et automatisation pour le traitement de fichiers volumineux.</p>
+                        <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0;">Architecture en 3 Phases</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <!-- Phase 1 -->
+                        <div style="background: rgba(219, 234, 254, 0.3); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 28px; height: 28px; background: var(--color-deep-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;">1</span>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Import SQL</h4>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Connexion à <strong>Microsoft SQL Server</strong> (base ARIA), import des données patients dans des DataFrames structurés : Patient_study, CT, Plans, Sessions, REG_CBCT.
+                            </p>
+                        </div>
+                        <!-- Phase 2 -->
+                        <div style="background: rgba(219, 234, 254, 0.3); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 28px; height: 28px; background: var(--color-deep-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;">2</span>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Arborescence</h4>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Construction d'une hiérarchie de dossiers organisée avec des fichiers <strong>infos.json</strong> contenant les tags d'identification DICOM pour chaque patient/séance.
+                            </p>
+                        </div>
+                        <!-- Phase 3 -->
+                        <div style="background: rgba(219, 234, 254, 0.3); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 28px; height: 28px; background: var(--color-deep-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0;">3</span>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Extraction DICOM</h4>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Extraction récursive via le protocole <strong>C-MOVE</strong> grâce à <strong>pynetdicom</strong>, avec mise en place d'un serveur DICOM virtuel pour la réception des fichiers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Classes techniques développées -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                        <div style="width: 40px; height: 40px; background: #f1f5f9; color: var(--color-dark); display: flex; align-items: center; justify-content: center; border-radius: 10px; flex-shrink: 0;">
+                            <i data-lucide="code-2" width="22" height="22"></i>
+                        </div>
+                        <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0;">Classes Techniques Développées</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="server" width="16" height="16" class="text-deepBlue"></i> C_move
+                            </h4>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Utilise <strong>pandas</strong> + <strong>pynetdicom</strong> pour établir la communication avec le serveur DICOM et exécuter les opérations C-MOVE. Nécessité de patcher le code source de pynetdicom pour ajouter le SOP Class UID propriétaire de Varian pour les fichiers RTPlan (<code style="font-size: 0.8rem; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">1.2.246.352.70.1.70</code>).
+                            </p>
+                        </div>
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="database" width="16" height="16" class="text-deepBlue"></i> Database
+                            </h4>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Connectivité SQL Server via <strong>pymssql</strong> (choisi pour éviter la dépendance à pyodbc). Exécute les requêtes SQL et retourne des DataFrames pandas structurés.
+                            </p>
+                        </div>
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="cog" width="16" height="16" class="text-deepBlue"></i> Aria_EXP
+                            </h4>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Classe orchestratrice principale. Gère l'intégralité du pipeline, de l'import SQL à l'extraction DICOM, en passant par la création de l'arborescence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission secondaire : Flask -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; border-radius: 10px; flex-shrink: 0;">
+                            <i data-lucide="globe" width="22" height="22"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0;">Mission Secondaire : Gestionnaire de Licences RayStation</h3>
+                            <span style="font-size: 0.8rem; color: var(--color-muted); font-style: italic;">Application Web Flask</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1rem; line-height: 1.6;">
+                        Développement d'une application web <strong>Flask</strong> pour monitorer l'utilisation des licences <strong>RayStation</strong> (logiciel de planification de traitement). J'ai conçu un parser Python pour extraire les informations du gestionnaire de licences.
+                    </p>
+                    <ul style="margin-bottom: 0; display: flex; flex-direction: column; gap: 0.4rem; list-style: none; padding: 0;">
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" style="color: #059669; display:inline-block; vertical-align:middle; margin-right:6px;"></i> Menu déroulant pour sélectionner une licence</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" style="color: #059669; display:inline-block; vertical-align:middle; margin-right:6px;"></i> Affichage du nombre total / utilisé de licences</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" style="color: #059669; display:inline-block; vertical-align:middle; margin-right:6px;"></i> Tableau des utilisateurs actifs (nom, IP, durée de connexion)</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" style="color: #059669; display:inline-block; vertical-align:middle; margin-right:6px;"></i> Permet aux physiciens de s'auto-gérer sans contacter la DSI</li>
+                    </ul>
+                </div>
+
+                <!-- Compétences techniques -->
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="cpu" width="20" height="20" class="text-deepBlue"></i>
+                        Technologies &amp; Compétences Acquises
+                    </h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Python (POO)</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">pynetdicom</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">pymssql</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">pandas</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">SQL Server</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Flask</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Norme DICOM</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Protocole C-MOVE</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">ARIA SIRT</span>
+                        <span style="font-size: 0.8rem; background: #dbeafe; color: var(--color-deep-blue); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Radiothérapie</span>
+                    </div>
+                </div>
+                
+                <!-- Map Card Eugène Marquis -->
+                <div class="card-glass" style="display: flex; gap: 2rem; padding: 1.5rem; border-radius: var(--radius-lg); margin-top: 2rem; margin-bottom: 2rem; align-items: center; max-width: 650px; margin-left: auto; margin-right: auto; flex-wrap: wrap; justify-content: center;">
+                    <div style="width: 250px; height: 250px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); flex-shrink: 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Centre+Eug%C3%A8ne+Marquis,+Rennes&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                            style="width: 100%; height: 100%; border: 0; filter: grayscale(10%) contrast(110%);"
+                            title="Centre Eugène Marquis - Rennes">
+                        </iframe>
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; color: var(--color-dark);">
+                            <i data-lucide="map" width="20" height="20" style="color: var(--color-accent);"></i>
+                            Localisation à Rennes
+                        </h3>
+                        <p style="font-size: 0.95rem; color: var(--color-muted); line-height: 1.5; margin-bottom: 1rem;">
+                            Le Centre Eugène Marquis est situé sur le site hospitalier de Pontchaillou, à Rennes.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-muted);">
+                            <span><i data-lucide="map-pin" width="16" height="16" style="display: inline-block; vertical-align: middle; margin-right: 4px; color: var(--color-accent);"></i> Avenue de la Bataille Flandres-Dunkerque, 35042 Rennes</span>
+                            <a href="https://maps.google.com/maps?q=Centre+Eug%C3%A8ne+Marquis,+Rennes" target="_blank" style="color: var(--color-accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem; transition: color 0.2s; width: fit-content;">
+                                Voir sur Google Maps <i data-lucide="external-link" width="14" height="14"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Master Rennes Detail Window -->
+    <div id="master-rennes" class="mac-window window-closed">
+        <div class="mac-titlebar">
+            <div class="mac-controls">
+                <button class="mac-btn close-btn" data-target="master-rennes" aria-label="Fermer"></button>
+                <button class="mac-btn minimize-btn" data-target="master-rennes" aria-label="Réduire"></button>
+                <button class="mac-btn zoom-btn" data-target="master-rennes" aria-label="Agrandir"></button>
+            </div>
+            <div class="mac-title"><i data-lucide="graduation-cap" width="14" height="14"></i> Master_BioInfo.app</div>
+            <div class="mac-status">v1.0.0</div>
+        </div>
+
+        <div class="mac-content container">
+            <div class="reveal">
+                <!-- Bouton de retour hérité -->
+                <div style="margin-bottom: 1.5rem;">
+                    <button class="mac-back-btn" data-back-to="experience" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.08); padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 500; color: var(--color-dark); transition: background 0.2s;">
+                        <i data-lucide="chevron-left" width="16" height="16" style="vertical-align: middle;"></i>
+                        <span>Page Précédente</span>
+                    </button>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <span class="badge" style="margin-bottom: 1rem; border-color: #c92a2a; color: #c92a2a;">Formation • 2026-2028</span>
+                    <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1.2;">Master Bio-informatique</h1>
+                    <h2 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; color: #c92a2a;">Université de Rennes</h2>
+                </div>
+
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700;">Le Master : Bio-informatique & Données de Santé</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+                        Je poursuivrai mes études au sein de ce Master à la rentrée 2026. Cette formation me permettra de consolider mes compétences en Data Science tout en me spécialisant fortement dans le traitement des données génomiques et biomédicales.
+                    </p>
+                    <ul class="skill-list" style="margin-bottom: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" style="color: #c92a2a; display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Génomique & Biologie Structurale :</strong> Traitement informatique de données issues des sciences de la vie.</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" style="color: #c92a2a; display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Machine Learning en Santé :</strong> Méthodes statistiques et algorithmiques appliquées à la médecine.</li>
+                        <li style="font-size: 0.9rem;"><i data-lucide="check" width="16" style="color: #c92a2a; display:inline-block; vertical-align:middle; margin-right:6px;"></i> <strong>Ingénierie Logicielle :</strong> Développement d'outils performants pour la recherche clinique.</li>
+                    </ul>
+                </div>
+
+                <!-- Map Card Univ Rennes -->
+                <div class="card-glass" style="display: flex; gap: 2rem; padding: 1.5rem; border-radius: var(--radius-lg); margin-top: 2rem; margin-bottom: 2rem; align-items: center; max-width: 650px; margin-left: auto; margin-right: auto; flex-wrap: wrap; justify-content: center;">
+                    <div style="width: 250px; height: 250px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); flex-shrink: 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Universit%C3%A9+de+Rennes,+Campus+de+Beaulieu,+Rennes&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            style="width: 100%; height: 100%; border: 0; filter: grayscale(10%) contrast(110%);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Université de Rennes">
+                        </iframe>
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; color: var(--color-dark);">
+                            <i data-lucide="map" width="20" height="20" style="color: #c92a2a;"></i>
+                            Localisation à Rennes
+                        </h3>
+                        <p style="font-size: 0.95rem; color: var(--color-muted); line-height: 1.5; margin-bottom: 1rem;">
+                            La formation est dispensée sur le Campus de Beaulieu, le grand pôle scientifique de l'Université de Rennes.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-muted);">
+                            <span><i data-lucide="map-pin" width="16" height="16" style="display: inline-block; vertical-align: middle; margin-right: 4px; color: #c92a2a;"></i> Campus de Beaulieu, 35000 Rennes</span>
+                            <a href="https://maps.google.com/maps?q=Universit%C3%A9+de+Rennes,+Campus+de+Beaulieu,+Rennes" target="_blank" style="color: #c92a2a; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem; transition: color 0.2s; width: fit-content;">
+                                Voir sur Google Maps <i data-lucide="external-link" width="14" height="14"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IUT de Vannes Detail Window -->
+    <div id="iut-vannes" class="mac-window window-closed">
+        <div class="mac-titlebar">
+            <div class="mac-controls">
+                <button class="mac-btn close-btn" data-target="iut-vannes" aria-label="Fermer"></button>
+                <button class="mac-btn minimize-btn" data-target="iut-vannes" aria-label="Réduire"></button>
+                <button class="mac-btn zoom-btn" data-target="iut-vannes" aria-label="Agrandir"></button>
+            </div>
+            <div class="mac-title"><i data-lucide="graduation-cap" width="14" height="14"></i> Formation_IUT.app</div>
+            <div class="mac-status">v1.0.0</div>
+        </div>
+
+        <div class="mac-content container">
+            <div class="reveal">
+                <!-- Bouton de retour hérité -->
+                <div style="margin-bottom: 1.5rem;">
+                    <button class="mac-back-btn" data-back-to="experience" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.05); border: 1px solid rgba(0, 0, 0, 0.08); padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 500; color: var(--color-dark); transition: background 0.2s;">
+                        <i data-lucide="chevron-left" width="16" height="16" style="vertical-align: middle;"></i>
+                        <span>Page Précédente</span>
+                    </button>
+                </div>
+
+                <!-- Header -->
+                <div style="margin-bottom: 2rem;">
+                    <span class="badge" style="margin-bottom: 1rem; border-color: var(--color-teal); color: var(--color-teal);">Formation • 2023-2026 (3 ans)</span>
+                    <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem; line-height: 1.2;">BUT Science des Données</h1>
+                    <h2 class="text-teal" style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">IUT de Vannes (Université de Bretagne Sud)</h2>
+                    <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 0.25rem;">
+                        <i data-lucide="route" width="14" height="14" style="display:inline-block; vertical-align:middle; margin-right:4px;"></i>
+                        Parcours <strong>VCOD</strong> (Visualisation, Conception d'Outils Décisionnels) · Options <strong>IA</strong> &amp; <strong>SIG</strong>
+                    </p>
+                </div>
+
+                <!-- Présentation de la formation -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="graduation-cap" width="20" height="20" style="color: var(--color-teal);"></i>
+                        La Formation : BUT Science des Données
+                    </h3>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1rem; line-height: 1.6;">
+                        Le <strong>B.U.T. Science des Données</strong> (Bachelor Universitaire de Technologie) est un diplôme national en 3 ans préparant aux métiers de la donnée. La formation couvre l'intégralité du cycle de vie de la donnée : de sa <strong>collecte</strong> à sa <strong>valorisation</strong>, en passant par son <strong>traitement</strong>, son <strong>analyse statistique</strong> et sa <strong>visualisation</strong>.
+                    </p>
+                    <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+                        J'ai suivi le parcours <strong>VCOD</strong> (Visualisation, Conception d'Outils Décisionnels), orienté vers la construction de <strong>systèmes d'information décisionnels</strong>, la <strong>datavisualisation</strong> et l'<strong>automatisation du reporting</strong>. En 3ème année, j'ai choisi les options <strong>Intelligence Artificielle (IA)</strong> et <strong>Systèmes d'Information Géographique (SIG)</strong>.
+                    </p>
+                </div>
+
+                <!-- 4 Compétences du BUT SD -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1.25rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="target" width="20" height="20" style="color: var(--color-teal);"></i>
+                        Les 4 Compétences du BUT SD
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                        <!-- Traiter -->
+                        <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 32px; height: 32px; background: var(--color-teal); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i data-lucide="database" width="18" height="18"></i>
+                                </span>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Traiter</h4>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Traiter des données à des fins décisionnelles : cycle de vie de la donnée, modèles adaptés, SQL, programmation, ETL.
+                            </p>
+                        </div>
+                        <!-- Analyser -->
+                        <div style="background: rgba(99, 102, 241, 0.06); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 32px; height: 32px; background: var(--color-accent); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i data-lucide="bar-chart-2" width="18" height="18"></i>
+                                </span>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Analyser</h4>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Analyser statistiquement les données : statistique descriptive, exploratoire, inférentielle, analyses multivariées, tests d'hypothèses.
+                            </p>
+                        </div>
+                        <!-- Valoriser -->
+                        <div style="background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 32px; height: 32px; background: #f59e0b; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i data-lucide="presentation" width="18" height="18"></i>
+                                </span>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Valoriser</h4>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Valoriser une production dans un contexte professionnel : datavisualisation, reporting, communication, aspects éthiques et réglementaires (RGPD).
+                            </p>
+                        </div>
+                        <!-- Développer (VCOD) -->
+                        <div style="background: rgba(139, 92, 246, 0.06); border: 1px solid rgba(139, 92, 246, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 32px; height: 32px; background: #8b5cf6; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i data-lucide="code-2" width="18" height="18"></i>
+                                </span>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Développer <span style="font-size: 0.7rem; background: rgba(139, 92, 246, 0.15); padding: 2px 6px; border-radius: 4px; font-weight: 600; color: #8b5cf6; margin-left: 4px;">VCOD</span></h4>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Développer un outil décisionnel : conception de solutions BI, automatisation du reporting, tableaux de bord interactifs, interopérabilité.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parcours & Options -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1.25rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="git-branch" width="20" height="20" style="color: var(--color-teal);"></i>
+                        Parcours VCOD &amp; Options Avancées
+                    </h3>
+
+                    <!-- VCOD -->
+                    <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <div style="width: 36px; height: 36px; background: var(--color-teal); color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; flex-shrink: 0;">
+                                <i data-lucide="layout-dashboard" width="20" height="20"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1rem; font-weight: 700; margin: 0;">Parcours VCOD</h4>
+                                <span style="font-size: 0.8rem; color: var(--color-muted);">Visualisation, Conception d'Outils Décisionnels</span>
+                            </div>
+                        </div>
+                        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" style="color: var(--color-teal); display:inline-block; vertical-align:middle; margin-right:4px;"></i> Conception et déploiement de <strong>solutions décisionnelles</strong> (entrepôts de données, ETL)</li>
+                            <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" style="color: var(--color-teal); display:inline-block; vertical-align:middle; margin-right:4px;"></i> <strong>Datavisualisation</strong> et création de <strong>tableaux de bord interactifs</strong></li>
+                            <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" style="color: var(--color-teal); display:inline-block; vertical-align:middle; margin-right:4px;"></i> Automatisation du <strong>reporting</strong> et interopérabilité des systèmes</li>
+                            <li style="font-size: 0.85rem;"><i data-lucide="chevron-right" width="14" style="color: var(--color-teal); display:inline-block; vertical-align:middle; margin-right:4px;"></i> <strong>Développement web</strong> pour la restitution de données (HTML, CSS, JS)</li>
+                        </ul>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <!-- Option IA -->
+                        <div style="background: rgba(99, 102, 241, 0.06); border: 1px solid rgba(99, 102, 241, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <div style="width: 32px; height: 32px; background: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; flex-shrink: 0;">
+                                    <i data-lucide="brain" width="18" height="18"></i>
+                                </div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Option IA</h4>
+                            </div>
+                            <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.35rem;">
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:3px;"></i> Apprentissage supervisé &amp; non supervisé</li>
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:3px;"></i> Scikit-Learn, réseaux de neurones</li>
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:3px;"></i> Validation croisée, métriques d'évaluation</li>
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" class="text-accent" style="display:inline-block; vertical-align:middle; margin-right:3px;"></i> Données complexes &amp; massives</li>
+                            </ul>
+                        </div>
+                        <!-- Option SIG -->
+                        <div style="background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.15); border-radius: var(--radius-md); padding: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <div style="width: 32px; height: 32px; background: #f59e0b; color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; flex-shrink: 0;">
+                                    <i data-lucide="map" width="18" height="18"></i>
+                                </div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;">Option SIG</h4>
+                            </div>
+                            <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.35rem;">
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" style="color: #f59e0b; display:inline-block; vertical-align:middle; margin-right:3px;"></i> Systèmes d'information géographique</li>
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" style="color: #f59e0b; display:inline-block; vertical-align:middle; margin-right:3px;"></i> QGIS, SQL Spatial (PostGIS)</li>
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" style="color: #f59e0b; display:inline-block; vertical-align:middle; margin-right:3px;"></i> Cartographie &amp; statistique spatiale</li>
+                                <li style="font-size: 0.82rem;"><i data-lucide="chevron-right" width="12" style="color: #f59e0b; display:inline-block; vertical-align:middle; margin-right:3px;"></i> Données géolocalisées, OpenData</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matières principales par semestre -->
+                <div class="card-glass" style="padding: 1.5rem; border-radius: var(--radius-lg); margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1.25rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="book-open" width="20" height="20" style="color: var(--color-teal);"></i>
+                        Ressources &amp; Matières Clés
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem;">
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                                <i data-lucide="code-2" width="14" height="14" style="color: var(--color-teal);"></i> Programmation
+                            </h4>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Python (bases → POO), R, VBA. Structures de données, algorithmes, bonnes pratiques.
+                            </p>
+                        </div>
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                                <i data-lucide="database" width="14" height="14" style="color: var(--color-teal);"></i> Bases de Données
+                            </h4>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                SQL (LMD, LDD), modèle relationnel, SGBD, conception BDD, NoSQL, entrepôts de données.
+                            </p>
+                        </div>
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                                <i data-lucide="scatter-chart" width="14" height="14" style="color: var(--color-teal);"></i> Statistiques
+                            </h4>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Descriptive, inférentielle, probabilités, tests d'hypothèses (H0/H1), séries temporelles, analyses multivariées (ACP, AFC, CAH).
+                            </p>
+                        </div>
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                                <i data-lucide="brain" width="14" height="14" style="color: var(--color-teal);"></i> Machine Learning
+                            </h4>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Apprentissage supervisé &amp; non supervisé, classification, régression, Scikit-Learn, évaluation de modèles.
+                            </p>
+                        </div>
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                                <i data-lucide="layout-dashboard" width="14" height="14" style="color: var(--color-teal);"></i> Décisionnel &amp; BI
+                            </h4>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                Entrepôts de données, ETL (Talend), cubes OLAP, tableaux de bord, Power BI, indicateurs de performance.
+                            </p>
+                        </div>
+                        <div style="background: rgba(241, 245, 249, 0.5); border: 1px solid rgba(226, 232, 240, 0.5); border-radius: var(--radius-md); padding: 1rem;">
+                            <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                                <i data-lucide="globe" width="14" height="14" style="color: var(--color-teal);"></i> Web &amp; Communication
+                            </h4>
+                            <p style="font-size: 0.8rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+                                HTML, CSS, JavaScript, datavisualisation, infographie, communication professionnelle FR/EN.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences techniques -->
+                <div class="grid-2" style="gap: 1rem; margin-bottom: 2rem;">
+                    <div class="skill-card" style="padding: 1.25rem; border-radius: var(--radius-md);">
+                        <div class="skill-icon" style="background: #e6fcf5; color: var(--color-teal); width: 44px; height: 44px; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <i data-lucide="database" width="24" height="24"></i>
+                        </div>
+                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Ingénierie des Données</h3>
+                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Conception de bases de données relationnelles et NoSQL, nettoyage, structuration et intégration de données hétérogènes via ETL (Talend). Entrepôts de données et modèle en étoile.</p>
                     </div>
                     <div class="skill-card" style="padding: 1.25rem; border-radius: var(--radius-md);">
-                        <div class="skill-icon" style="background: #fce7f3; color: #ec4899; width: 44px; height: 44px; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
-                            <i data-lucide="file-image" width="24" height="24"></i>
+                        <div class="skill-icon" style="background: #e6fcf5; color: var(--color-teal); width: 44px; height: 44px; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+                            <i data-lucide="bar-chart-3" width="24" height="24"></i>
                         </div>
-                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Imagerie Médicale</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Compréhension approfondie du format DICOM et de l'anonymisation.</p>
+                        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;">Outils Décisionnels &amp; BI</h3>
+                        <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5;">Construction de tableaux de bord interactifs, indicateurs de performance (KPI), reporting automatisé. Chaîne décisionnelle complète de l'entrepôt à la visualisation.</p>
+                    </div>
+                </div>
+
+                <!-- Tags compétences -->
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="cpu" width="20" height="20" style="color: var(--color-teal);"></i>
+                        Technologies &amp; Compétences Acquises
+                    </h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Python (POO)</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">R</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">SQL</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">NoSQL</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">VBA</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Pandas / NumPy</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Scikit-Learn</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Machine Learning</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Talend (ETL)</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">QGIS</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">SQL Spatial</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Statistiques</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Tests H0/H1</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">HTML / CSS / JS</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Suite Office</span>
+                        <span style="font-size: 0.8rem; background: #e6fcf5; color: var(--color-teal); padding: 4px 12px; border-radius: 6px; font-weight: 600;">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Map Card IUT Vannes -->
+                <div class="card-glass" style="display: flex; gap: 2rem; padding: 1.5rem; border-radius: var(--radius-lg); margin-top: 2rem; margin-bottom: 2rem; align-items: center; max-width: 650px; margin-left: auto; margin-right: auto; flex-wrap: wrap; justify-content: center;">
+                    <div style="width: 250px; height: 250px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); flex-shrink: 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=IUT+de+Vannes,+8+Rue+Montaigne,+Vannes&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            style="width: 100%; height: 100%; border: 0; filter: grayscale(10%) contrast(110%);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="IUT de Vannes">
+                        </iframe>
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; color: var(--color-dark);">
+                            <i data-lucide="map" width="20" height="20" style="color: var(--color-teal);"></i>
+                            Localisation à Vannes
+                        </h3>
+                        <p style="font-size: 0.95rem; color: var(--color-muted); line-height: 1.5; margin-bottom: 1rem;">
+                            Le campus de l'IUT de Vannes se situe dans un cadre idéal pour les études supérieures en Bretagne.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--color-muted);">
+                            <span><i data-lucide="map-pin" width="16" height="16" style="display: inline-block; vertical-align: middle; margin-right: 4px; color: var(--color-teal);"></i> 8 Rue Montaigne, 56000 Vannes</span>
+                            <a href="https://maps.google.com/maps?q=IUT+de+Vannes,+8+Rue+Montaigne,+Vannes" target="_blank" style="color: var(--color-teal); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem; transition: color 0.2s; width: fit-content;">
+                                Voir sur Google Maps <i data-lucide="external-link" width="14" height="14"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -689,7 +1434,7 @@
 
 
     <!-- Logic -->
-    <script src="script.js?v=2.0"></script>
+    <script src="script.js?v=4.1"></script>
 </body>
 
 </html>
